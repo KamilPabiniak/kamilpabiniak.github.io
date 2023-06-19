@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - know about me</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/my_logo_small_icon.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/My-logo-small.png" alt="Kamil's logo" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Kamil Pabiniak">Kamil Pabiniak</h1>
+
+          <p class="title">Game Programmer/Graphic Designer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:dodadko@gmail.com" class="contact-link">dodadko@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:530748336" class="contact-link">+48 530 748 336</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2002-08-29">August 29, 2002</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Lodz, Poland</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/kamil.pabiniak/" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://instagram.com/cz_a_r_n_y_?igshid=MzNlNGNkZWQ4Mg==" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I am a graphic designer by profession, but I find myself in programming 
+            and many other things. In graphics, I specialize in creating advertising, logos, thumbnails, etc. 
+          </p>
+
+          <p>
+            I am often the creator of various main systems in games. I am happy when my team needs me, I often feel I am the heart of the team, 
+            because there is no denying that I like to help everyone, and my experience and 
+            comprehensive knowledge allows me to fix the problem efficiently. 
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Creating Advertising Graphics</h4>
+
+                <p class="service-item-text">
+                  I create modern graphic designs, holding the level of an expert. 
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Programming</h4>
+
+                <p class="service-item-text">
+                  Having been a Junior, I can create tools in Unity for a designer. 
+                  Optimize code and solve its problems cleverly.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/ChatGPT.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">ChatGPT</h4>
+
+                <p class="service-item-text">
+                  It's something I needed. 
+                  A tool I love to use and more than once I achieve a lot with its help
+                </p>
+              </div>
+
+            </li>
+
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/gold-ingot.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Hobbies, etc.</h4>
+
+                <p class="service-item-text">
+                  As a hobby, I create various types of footage. 
+                  Sometimes I also play with sound effects. I am often interested in new things 
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Collegium Da Vincii in Poznan (Game Development Studies)</h4>
+
+              <span>Currently</span>
+
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">ZSPM Technical High School #12</h4>
+
+              <span>2018 — 2022</span>
+
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Karl Dedecius Public Middle School #43</h4>
+
+              <span>2015 — 2018</span>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Primary School #162</h4>
+
+              <span>2009 — 2015</span>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Rubens Games - programmer internship</h4>
+
+              <span>2023</span>
+
+              <p class="timeline-text">
+                Experience working for a computer game development company. 
+                Learning new ways of programming and working in a team.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Autodesk 3ds max course</h4>
+
+              <span>2020</span>
+
+              <p class="timeline-text">
+                Creating 3D objects. 
+                Learning new features of the program. 
+                Earn certificates for completing courses.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">BROst Center for Computer Education and Technology Lodz course</h4>
+
+              <span>2020</span>
+
+              <p class="timeline-text">
+                Acquire advanced skills in the use of Adobe Photoshop. 
+                To obtain a certificate confirming the completion of the course and obtaining a positive test result.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">MULTIEKODRUK  - graphic internship</h4>
+
+              <span>2019</span>
+
+              <p class="timeline-text">
+                Modern advertising creation systems. The process of advertising production, from design to installation. 
+                The exact process of working in a graphics program. Acquire a certificate and a diploma for completing the internship.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Work - cover design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Individual projects</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Work - posters</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Programming</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Work - cover design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Individual projects</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Work - posters</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Programming</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="programming">
+              <a href="https://drive.google.com/file/d/1ztnky6dzN_XMfi_qgnmlwW_B4sYbgduu/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Landmine.jpg" alt="mine" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Mine</h3>
+
+                <p class="project-category">Programming</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="programming">
+              <a href="https://drive.google.com/file/d/11UtMQfmc9nAQ9LCXKD1mjQePyNwRKcbM/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/PlayerMove.jpg" alt="player" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Player</h3>
+
+                <p class="project-category">Programming</p>
+
+              </a>
+            </li>
+
+            
+            <li class="project-item  active" data-filter-item data-category="programming">
+              <a href="https://drive.google.com/file/d/1jey8JSw5AN5act9kul1YUp9Ws62G8cs4/view?usp=sharing">
+
+                <figure class="project-img">
+
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Waypoint.jpg" alt="waypoint" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Waypoint</h3>
+
+                <p class="project-category">Programming</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="individual projects">
+              <a href="https://drive.google.com/file/d/12zuBWNHMs7P3tCGSJHhyCVDX41nZHx0r/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/DemonCharacter.png" alt="demon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Demon</h3>
+
+                <p class="project-category">Individual projects</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="individual projects">
+              <a href="https://drive.google.com/file/d/12Kg9u23nnVvhyp4r9_rLZLQ6afAIpLP0/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/gambar 6.png" alt="Doughnut" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Doughnut </h3>
+
+                <p class="project-category">Individual projects</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="individual projects">
+              <a href="https://drive.google.com/file/d/1fDsvBC5znoLKPqYWeDW6_qgGfLh8l590/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/comics pi try complite.png" alt="pi" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Pi</h3>
+
+                <p class="project-category">Individual projects</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="individual projects">
+              <a href="https://drive.google.com/file/d/174vMyfLnbB7ooa3T1UEvLbMTQxQObkBp/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Czaha.png" alt="skull" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Skull</h3>
+
+                <p class="project-category">Individual projects</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="work - cover design">
+              <a href="https://drive.google.com/file/d/1aRO4TSq-WEy1YD-9g-hZu6p70AULAnCH/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Nemesis !.png" alt="nemesis" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Nemesis</h3>
+
+                <p class="project-category">Work - cover design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="work - cover design">
+              <a href="https://drive.google.com/file/d/14jhoNLvfLR9hAvknUaYLUKOMACmzdQsp/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/OLISI ROMANCE.png" alt="romance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Romance</h3>
+
+                <p class="project-category">Work - cover design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="work - cover design">
+              <a href="https://drive.google.com/file/d/14jhoNLvfLR9hAvknUaYLUKOMACmzdQsp/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/DGRSb.png" alt="dragons" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Dragons</h3>
+
+                <p class="project-category">Work - cover design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="work - posters">
+              <a href="https://drive.google.com/file/d/1u4CTzG4WUdWc5hO9RqHjq6pbzL4VXt26/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/plakat dynia 2.0.jpg" alt="scary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Scary</h3>
+
+                <p class="project-category">Work - posters</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="work - posters">
+              <a href="https://drive.google.com/file/d/17Twrp5Ppoz8Su27gpKhdyOex2y5E10Zq/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/PlakatRandom.png" alt="Random" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Random</h3>
+
+                <p class="project-category">Work - posters</p>
+
+              </a>
+            </li>
+
+            
+
+            
+
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
