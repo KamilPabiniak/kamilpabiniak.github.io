@@ -157,3 +157,25 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapseBtns = document.querySelectorAll('.collapse-btn');
+  collapseBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const collapseContent = this.nextElementSibling;
+      if (collapseContent.style.display === 'none' || collapseContent.style.display === '') {
+        collapseContent.style.display = 'block';
+        this.textContent = 'Hide';
+      } else {
+        collapseContent.style.display = 'none';
+        this.textContent = 'Show info';
+      }
+    });
+  });
+});
+
+
+
+
+
+
