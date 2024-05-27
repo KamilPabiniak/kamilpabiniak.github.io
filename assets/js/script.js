@@ -77,41 +77,35 @@ for (let i = 0; i < selectItems.length; i++) {
 
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
+const filterButtons = document.querySelectorAll("[data-filter-btn]");
 
+// Funkcja filtrowania
 const filterFunc = function (selectedValue) {
-
   for (let i = 0; i < filterItems.length; i++) {
-
+    const item = filterItems[i];
     if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
+      item.classList.add("active");
+    } else if (selectedValue === item.dataset.category) {
+      item.classList.add("active");
     } else {
-      filterItems[i].classList.remove("active");
+      item.classList.remove("active");
     }
-
   }
+};
 
-}
-
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
-
-for (let i = 0; i < filterBtn.length; i++) {
-
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
+// Dodanie wydarzenia do wszystkich przycisków filtrowania
+filterButtons.forEach(button => {
+  button.addEventListener("click", function () {
+    const selectedValue = this.innerText.toLowerCase();
     filterFunc(selectedValue);
 
-    lastClickedBtn.classList.remove("active");
+    filterButtons.forEach(btn => btn.classList.remove("active"));
     this.classList.add("active");
-    lastClickedBtn = this;
-
   });
+});
 
-}
+// Ustawienie domyślnego stanu filtrowania na "all"
+filterFunc("all");
 
 
 

@@ -945,9 +945,17 @@ main {
   display: none;
 }
 
+.project-item-passive {
+  display: none;
+}
+
 .project-item.active {
   display: grid;
   animation: scaleUp 0.25s ease forwards;
+}
+
+.project-item-passive.active {
+  display: grid;
 }
 
 @keyframes scaleUp {
