@@ -951,11 +951,24 @@ main {
 
 .project-item.active {
   display: grid;
+  background-color: var(--onyx);
+  border: 1px solid hsl(240, 0%, 30%);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: scaleUp 0.25s ease forwards;
 }
 
 .project-item-passive.active {
   display: grid;
+  background-color: var(--onyx);
+  border: 1px solid hsl(240, 0%, 30%);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: scaleUp 0.25s ease forwards;
 }
 
 @keyframes scaleUp {
