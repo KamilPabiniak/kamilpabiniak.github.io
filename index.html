@@ -195,15 +195,17 @@
         <section class="about-text">
           <p>
             My goal is to find a job in the Game Dev industry in a place that will challenge me, allow me to develop my skills and contribute to the development of the project.
-            To achieve these goals, I am focused on continuously improving my programming skills. 
-            I have a year and a half of experience working in a design team (6 projects), which I gained, among other things, during an internship, 
-            where I gained practical knowledge by creating useful tools for designers in Unity, 
-            and theoretical knowledge by learning about design patterns used by experienced game developers.
+            In order to achieve these goals, I focus on continuously improving my programming skills.
+            <br>
+            I have two years of experience working in a project team (including 7 projects), which I gained, among other things, during my internship,
+            Where I gained practical knowledge creating useful tools for designers in Unity,
+            and theoretical knowledge by learning design patterns used by experienced game developers.
           </p>
 
           <p>
-            I try to participate in online courses and workshops, which allows me to stay up to date with the latest trends and technologies in the game industry.
-            As a hobby, I watch programs related to the world of game development to stay abreast of the latest news and challenges facing the industry.
+            If I have the opportunity, I try to participate in courses and workshops, which enriches the knowledge I willingly share 
+            with others and its practicality contributes to better project management, order in the project and easier implementation of new features.
+            As a hobby, I watch programs related to the world of games to stay up to date with the latest news and challenges facing the industry.
           </p>
           
           <b>C# - Unity - Rider - Visual Studio - Graphic Image Processing</b>
@@ -218,6 +220,35 @@
 
           <h3 class="h3 service-title">Projects</h3>
           
+          <!--
+           section
+          -->
+
+          <li class="service-item">
+
+            <div class="special-number">
+              <ion-icon name="hammer-outline" size="large"></ion-icon>
+            </div>
+
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title"> Don't Crash (Game Proto) - April 2024</h4>
+
+              <p class="service-item-text">
+                VR Assembling the toy car. In April, we started a VR project for college course credit.
+                <br>
+                The project similar on the game Bad Piggies with the difference that we would be in a toy factory, creating a vehicle for field testing. All in VR.
+                <br>
+                From the project I learned from the XR Interaction Toolkit and shaders and how to make them display images from different cameras on the scene.
+                At the moment the work is on hold. I can't share it, but I will be happy to tell you about our achievements.
+              </p>
+
+            </div>
+
+            <ul class="social-list">
+              
+            </ul>
+
+          </li>
 
             <!--
              section
@@ -308,7 +339,7 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Chesspears - October 2023</h4>
+                <h4 class="h4 service-item-title">Chesspeares - October 2023</h4>
 
                 <p class="service-item-text">
                   For the past few months, we have been working with a team made up of university students on a game in the climate of puppet theatre with chess rules. 
@@ -319,7 +350,7 @@
 
               <ul class="social-list">
                 <li class="social-item">
-                  <a href="https://zoriagames.itch.io/chesspeare" class="social-link">
+                  <a href="https://zoriagames.itch.io/chesspearee" class="social-link">
                     <ion-label class="special-number">Game</ion-label>
                     <ion-icon name="logo-windows"></ion-icon>
                   </a>
@@ -510,8 +541,7 @@
 
         <section class="timeline">
 
-          <div class="ti
-          tle-wrapper">
+          <div class="title-wrapper">
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
@@ -637,7 +667,7 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Chesspear</button>
+              <button data-filter-btn>Chesspeare</button>
             </li>
 
             <li class="filter-item">
@@ -669,7 +699,7 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Chesspear</button>
+                <button data-select-item>Chesspeare</button>
               </li>
 
               <li class="select-item">
@@ -679,21 +709,199 @@
               <li class="select-item">
                 <button data-select-item>Individual projects</button>
               </li>
-              
             </ul>
-
           </div>
-                    <!--  
-                    <div class="collapse-text">
-                      <p>This is the content that will collapse or expand.</p>
-                    </div>
-                    <div class="collapse-image">
-                      <img src="your_image.jpg" alt="Your Image">
-                    </div>
-                    -->
+          
+          
           <ul class="project-list">
 
-            <li class="project-item-passive" data-filter-item data-category="chesspear">
+            <!--
+            Enter
+            -->
+
+            <li class="project-item-passive" data-filter-item data-category="chesspeare">
+              <a>
+                <figure class="project-img">
+
+                  <img src="./assets/images/Dialogue.gif" alt="grid" loading="lazy">
+
+                </figure>
+                <h3 class="project-title">Global Data for Characters in game - script</h3>
+
+                <p class="project-category">Chesspeare</p>
+              </a>
+              <!-- #Info button  -->
+
+              <div class="collapse-container">
+                <ion-button class="collapse-btn">
+                  Show info
+                </ion-button>
+
+                <div class="collapse-content">
+                  <div class="content-wrapper">
+                    <div class="collapse-text">
+                      <p>
+                      <div class="collapse-image-sec">
+                        <img src="./assets/images/CharactersData.png" alt="grid" loading="lazy">
+                      </div>
+                        There will be various characters in the Chesspeare game and it was known that it would be necessary to develop a system efficient enough 
+                        to be able to receive new information about the characters from anywhere and implement an action, i.e. recreate the dialogue with the appropriate character.
+                        <br><br>
+                      </p>
+                    </div>
+                  </div>
+                  <div >
+                    <div class="collapse-text">
+                      <p>
+                        The script loads the character data (appearance and name) and then supplies it to the dialogue script.
+                        <br>
+                        Classes receiving data can choose a character and write a dialogue.
+                        <br>
+                        For example, a class on starting dialogues:
+                      <br>
+                      <br>
+                      <br>
+                      <div class="collapse-image-sec">
+                        <img src="./assets/images/StartDialogue.png" alt="grid" loading="lazy">
+                      </div>
+                        <br>
+                      Characters are provided in the form of an enum, so the designer can easily select them without unnecessary typing of character names.
+                      We choose the side on which the character is speaking and enter the character's dialogue below.
+                      <br>
+                      Limit of 180 characters due to translations and the size of the dialogue grid that a 1920 x 1080p screen can accommodate (This may change later).
+                      <br>
+                      You can always remove the dialogue using the Remove button next to the character name
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            
+            <!--
+            Enter
+            -->
+
+            <li class="project-item-passive" data-filter-item data-category="chesspeare">
+              <a>
+                <figure class="project-img">
+
+                  <img src="./assets/images/BotMoves.gif" alt="grid" loading="lazy">
+
+                </figure>
+                <h3 class="project-title">Moves Factories for Bots - script</h3>
+
+                <p class="project-category">Chesspeare</p>
+              </a>
+              <!-- #Info button  -->
+
+              <div class="collapse-container">
+                <ion-button class="collapse-btn">
+                  Show info
+                </ion-button>
+
+                <div class="collapse-content">
+                  <div class="content-wrapper">
+                    <div class="collapse-text">
+                      <p>
+                        I programmed scripts to trigger movement for our game's AI. But as we know figures in chess have different movement strategies, 
+                        and that's why I used such a way to easily implement movement rules and add possible new rules (e.g. wild figures in chess)
+                        <br><br><br>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="collapse-image-sec">
+                    <img src="./assets/images/Factories.png" alt="grid" loading="lazy">
+                  </div>
+                  <div >
+                    <div class="collapse-text">
+                      <p>
+                        <br>
+                        Example script that uses the factoria class:
+                        <br>
+                        <br>
+                        <br>
+                        <div class="collapse-image-sec">
+                          <img src="./assets/images/LineMoveExecuter.png" alt="grid" loading="lazy">
+                        </div>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            
+            
+            <!--
+             Enter
+             -->
+
+            <li class="project-item-passive" data-filter-item data-category="chesspeare">
+              <a>
+                <figure class="project-img">
+
+                  <img src="./assets/images/Header&Locker.png" alt="grid" loading="lazy">
+
+                </figure>
+                <h3 class="project-title">Better header & Lock on edits - attributes script</h3>
+
+                <p class="project-category">Chesspeare</p>
+              </a>
+              <!-- #Info button  -->
+
+              <div class="collapse-container">
+                <ion-button class="collapse-btn">
+                  Show info
+                </ion-button>
+
+                <div class="collapse-content">
+                  <div class="content-wrapper">
+                    <div class="collapse-text">
+                      <p style="color: red">
+                        Before I am accused of something. The screenshot was scaled by AI so that I could show my work in better quality.
+                        I know it is not equal but if anyone wants proof of the creation of these attributes I will be happy to show them.
+                        <br>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="collapse-image-sec">
+                    <img src="./assets/images/Header&Locker_Oryginal.png" alt="grid" loading="lazy">
+                  </div>
+                  <div >
+                    <div class="collapse-text">
+                      <p>
+                        <br>
+                        At some point in the project, there was a need to better title declarations and better label them in the inspector.
+                        Therefore, I created Header 2.0 to support the designer's work and make it easier for him to discern in the inspector with colors and font sizes.
+                        <br><br>
+                        In addition, as part of the initiative, I added an attribute that blocks editing and at the same time can continue
+                        <br>
+                        to show variables in the declaration to facilitate the work in testing. The attribute has the ability to edit so that if anything happens during testing
+                        <br>
+                        or changing the concept, you can change the value of the data. It also has the ability to set a password, should someone click the edit option by mistake.
+                        <br><br><br>
+                        <div class="collapse-image-sec">
+                          <img src="./assets/images/Password.png" alt="grid" loading="lazy">
+                        </div>
+                        <br>
+                        The password is set in the attribute and is not mandatory.
+                        <br><br>
+                        These are small things, but they help nicely in work
+                        <br>
+                        and it's good support for my project on which I am working in the team.
+                        <br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            
+             <!--
+             Enter
+             -->
+            
+            <li class="project-item-passive" data-filter-item data-category="chesspeare">
               <a>
                 <figure class="project-img">
 
@@ -702,7 +910,7 @@
                 </figure>
                 <h3 class="project-title">Material&Mesh Replacer - editor script</h3>
 
-                <p class="project-category">Chesspear</p>
+                <p class="project-category">Chesspeare</p>
               </a>
               <!-- #Info button  -->
 
@@ -783,9 +991,12 @@
                 </div>
               </div>
             </li>
-              
+
+            <!--
+            Enter
+            -->
             
-            <li class="project-item-passive" data-filter-item data-category="chesspear">
+            <li class="project-item-passive" data-filter-item data-category="chesspeare">
               <a>
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -797,7 +1008,7 @@
                 </figure>
                 <h3 class="project-title">Grid Position Set - script</h3>
 
-                <p class="project-category">Chesspear</p>
+                <p class="project-category">Chesspeare</p>
               </a>
               
               <!-- #Info button  -->
@@ -809,7 +1020,7 @@
                 <div class="collapse-content">
                   <div class="content-wrapper">
                     <div class="collapse-text">
-                      <p>This is a script I created myself to easily set levels in our Chesspear game.
+                      <p>This is a script I created myself to easily set levels in our Chesspeare game.
                         The most important element is **On Grid Position.** This is a tool that allows you to conveniently create figure settings for given levels.
 
                         Initially the fields look like this:
@@ -857,7 +1068,10 @@
                 </div>
               </div>
             </li>
-           
+
+            <!--
+            Enter
+            -->
 
             <li class="project-item  active" data-filter-item data-category="secel">
               <a href="https://drive.google.com/file/d/1ztnky6dzN_XMfi_qgnmlwW_B4sYbgduu/view?usp=sharing">
@@ -868,7 +1082,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Landmine.jpg" alt="mine" loading="lazy">
+                  <img src="./assets/images/Landmine.jpeg" alt="mine" loading="lazy">
                   
                 </figure>
                 <h3 class="project-title">LandMine - script</h3>
@@ -900,7 +1114,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/PlayerMove.jpg" alt="player" loading="lazy">
+                  <img src="./assets/images/PlayerMove.jpeg" alt="player" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Player - script</h3>
@@ -909,38 +1123,10 @@
 
               </a>
             </li>
-            
 
-            <li class="project-item  active" data-filter-item data-category="individual projects">
-              <a href="https://drive.google.com/file/d/12zuBWNHMs7P3tCGSJHhyCVDX41nZHx0r/view?usp=sharing">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/DemonCharacter.png" alt="demon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">D&D Koh - Demon</h3>
-
-                <p class="project-category">Individual projects</p>
-
-              </a>
-
-              <div class="collapse-container">
-                <ion-button class="collapse-btn">
-                  Show info
-                </ion-button>
-                <div class="collapse-content">
-                  <div class="content-wrapper">
-                    <div class="collapse-text">
-                      <p>The design of my invented D&D character at the beginning of my journey with RPGs. A half demon character that turns out under a disguise that resembles a human but does not have genitals thus not having to hide under clothing. He's looking for the purpose of his existence like many of us</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
+            <!--
+            Enter
+            -->
             
 
             <li class="project-item  active" data-filter-item data-category="individual projects">
@@ -977,7 +1163,10 @@
                 </div>
               </div>
             </li>
-            
+
+            <!--
+            Enter
+            -->
 
             <li class="project-item  active" data-filter-item data-category="individual projects">
               <a href="https://drive.google.com/file/d/1aRO4TSq-WEy1YD-9g-hZu6p70AULAnCH/view?usp=sharing">
@@ -1010,7 +1199,10 @@
                 </div>
               </div>
             </li>
-            
+
+            <!--
+            Enter
+            -->
 
           </ul>
 
