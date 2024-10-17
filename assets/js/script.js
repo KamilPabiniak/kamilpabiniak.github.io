@@ -77,7 +77,6 @@ for (let i = 0; i < selectItems.length; i++) {
 const filterItems = document.querySelectorAll("[data-filter-item]");
 const filterButtons = document.querySelectorAll("[data-filter-btn]");
 
-// Funkcja filtrowania
 const filterFunc = function (selectedValue) {
   for (let i = 0; i < filterItems.length; i++) {
     const item = filterItems[i];
@@ -91,7 +90,6 @@ const filterFunc = function (selectedValue) {
   }
 };
 
-// Dodanie wydarzenia do wszystkich przycisków filtrowania
 filterButtons.forEach(button => {
   button.addEventListener("click", function () {
     const selectedValue = this.innerText.toLowerCase();
@@ -102,7 +100,6 @@ filterButtons.forEach(button => {
   });
 });
 
-// Ustawienie domyślnego stanu filtrowania na "all"
 filterFunc("all");
 
 
