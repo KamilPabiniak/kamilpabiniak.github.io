@@ -68,7 +68,7 @@
   --fs-5: 15px;
   --fs-6: 14px;
   --fs-7: 13px;
-  --title-fs: 28px;
+  --title-fs: 40px;
 
   /* font-weight */
   --fw-300: 300;
@@ -340,7 +340,6 @@ main {
   background: var(--onyx);
   font-size: var(--title-fs);
   font-weight: var(--fw-800);
-  width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
 }
@@ -1432,17 +1431,25 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box img { width: 120px; border-radius: 30px; }
 
-  .info-content .name { margin-bottom: 10px; }
+  .info-content .name 
+  { 
+    margin-bottom: 10px; 
+  }
 
-  .info-content .title { padding: 5px 18px; }
+  .info-content .title 
+  { 
+    padding: 4px 28px;
+  }
 
-  .info_more-btn {
+  .info_more-btn 
+  {
     top: -30px;
     right: -30px;
     padding: 10px 15px;
   }
 
-  .info_more-btn span {
+  .info_more-btn span 
+  {
     display: block;
     font-size: var(--title-fs);
   }
@@ -1925,7 +1932,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     text-align: center;
   }
 
-  .info-content .title { margin: auto; }
+
 
   .info_more-btn { display: none; }
 
