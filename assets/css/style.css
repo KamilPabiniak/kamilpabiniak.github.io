@@ -36,6 +36,13 @@
     hsl(45, 100%, 72%), 
     hsl(35, 100%, 68%)
   );
+  --content-gradient-grey: linear-gradient(
+          to bottom right,
+          hsl(0, 0%, 25%) 0%,
+          hsl(0, 0%, 20%) 90%
+  );
+  
+  
 
   /* solid */
 
@@ -51,6 +58,7 @@
   --grey-gold: hsl(45, 40%, 40%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --light-gray-black-70: hsla(0, 0%, 50%, 0.2);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
   /**
@@ -1071,23 +1079,58 @@ main {
 .collapse-content {
   display: none;
   padding: 20px;
-  background-color: var(--grey-gold);
+  background-color: var(--light-gray-black-70);
   border-bottom-left-radius: 10px; /* Zaokrąglone krawędzie dla zawartości */
   border-bottom-right-radius: 10px;
 }
 
 .content-wrapper {
+  position: relative;
+  background: var(--text-gradient-yellow);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
   display: flex;
+  margin-bottom: 20px;
 }
 
-.collapse-text {
+.content-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.content-wrapper-no-flex {
+  position: relative;
+  background: var(--text-gradient-yellow);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.content-wrapper-no-flex::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.content-text {
   color: var(--white-2);
-  flex: 1; /* Elastyczny rozmiar dla tekstu, aby zdjęcie było na prawo */
+  flex: 1; 
   margin-bottom: 10px;
 }
 
 .collapse-image {
-  margin-left: 10px; /* Odstęp między tekstem a obrazem */
+  margin-left: 10px; 
   margin-bottom: 20px;
 }
 
@@ -1099,13 +1142,15 @@ main {
   margin-right: auto;
 }
 
-.collapse-image-sec {
-  margin-left: 10px; /* Odstęp między tekstem a obrazem */
+.content-image {
+  margin-left: 10px;
   margin-bottom: 20px;
+  border-radius: 14px;
+  padding: 25px;
 }
 
 /* Styl podstawowy dla obrazów */
-.collapse-image-sec img {
+.content-image img {
   display: block;
   max-width: 90%;
   max-height: 100%;
@@ -1115,7 +1160,7 @@ main {
 }
 
 /* Styl po najechaniu kursorem na obraz */
-.collapse-image-sec img:hover {
+.content-image img:hover {
   transform: scale(1.15); /* Skalowanie obrazu do 120% oryginalnego rozmiaru */
 }
 

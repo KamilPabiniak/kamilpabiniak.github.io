@@ -632,6 +632,10 @@
             <li class="filter-item">
               <button data-filter-btn>Secel</button>
             </li>
+            
+            <li class="filter-item">
+              <button data-filter-btn>HLSL</button>
+            </li>
 
           </ul>
 
@@ -660,6 +664,10 @@
               <li class="select-item">
                 <button data-select-item>Secel</button>
               </li>
+
+              <li class="select-item">
+                <button data-select-item>HLSL</button>
+              </li>
               
             </ul>
           </div>
@@ -676,7 +684,7 @@
                 <figure class="project-img">
                   <img src="./assets/images/Dialogue.gif" alt="grid" loading="lazy">
                 </figure>
-                <h3 class="project-title">Global Data for Characters in game - script</h3>
+                <h3 class="project-title">Script - Global Data for Characters in game</h3>
 
                 <p class="project-category">Chesspeare</p>
               </a>
@@ -688,29 +696,27 @@
 
                 <div class="collapse-content">
                   <div class="content-wrapper">
-                    <div class="collapse-text">
+                    <div class="content-text">
                       <p>
-                      <div class="collapse-image-sec">
+                      <div class="content-image">
                         <img src="./assets/images/CharactersData.png" alt="grid" loading="lazy">
                       </div>
                         There will be various characters in the Chesspeare game and it was known that it would be necessary to develop a system efficient enough 
                         to be able to receive new information about the characters from anywhere and implement an action, i.e. recreate the dialogue with the appropriate character.
-                        <br><br>
                       </p>
                     </div>
                   </div>
-                  <div >
-                    <div class="collapse-text">
+                  <div class="content-wrapper">
+                    <div class="content-text">
                       <p>
                         The script loads the character data (appearance and name) and then supplies it to the dialogue script.
                         <br>
                         Classes receiving data can choose a character and write a dialogue.
                         <br>
                         For example, a class on starting dialogues:
-                      <br>
-                      <br>
-                      <br>
-                      <div class="collapse-image-sec">
+                      <br><br><br>
+                      
+                      <div class="content-image">
                         <img src="./assets/images/StartDialogue.png" alt="grid" loading="lazy">
                       </div>
                         <br>
@@ -751,26 +757,25 @@
 
                 <div class="collapse-content">
                   <div class="content-wrapper">
-                    <div class="collapse-text">
+                    <div class="content-text">
                       <p>
                         I programmed scripts to trigger movement for our game's AI. But as we know figures in chess have different movement strategies, 
                         and that's why I used such a way to easily implement movement rules and add possible new rules (e.g. wild figures in chess)
-                        <br><br><br>
                       </p>
                     </div>
                   </div>
-                  <div class="collapse-image-sec">
+                  <div class="content-image">
                     <img src="./assets/images/Factories.png" alt="grid" loading="lazy">
                   </div>
                   <div >
-                    <div class="collapse-text">
+                    <div class="content-text">
                       <p>
                         <br>
                         Example script that uses the factoria class:
                         <br>
                         <br>
                         <br>
-                        <div class="collapse-image-sec">
+                        <div class="content-image">
                           <img src="./assets/images/LineMoveExecuter.png" alt="grid" loading="lazy">
                         </div>
                       </p>
@@ -805,19 +810,20 @@
 
                 <div class="collapse-content">
                   <div class="content-wrapper">
-                    <div class="collapse-text">
+                    <div class="content-text">
                       <p style="color: red">
-                        Before I am accused of something. The screenshot was scaled by AI so that I could show my work in better quality.
+                        <b>Before I am accused of something. The screenshot was scaled by AI so that I could show my work in better quality.
                         I know it is not equal but if anyone wants proof of the creation of these attributes I will be happy to show them.
+                        </b>>
                         <br>
                       </p>
                     </div>
-                  </div>
-                  <div class="collapse-image-sec">
+                  <div class="content-image">
                     <img src="./assets/images/Header&Locker_Oryginal.png" alt="grid" loading="lazy">
                   </div>
+                  </div>
                   <div >
-                    <div class="collapse-text">
+                    <div class="content-text">
                       <p>
                         <br>
                         At some point in the project, there was a need to better title declarations and better label them in the inspector.
@@ -829,7 +835,7 @@
                         <br>
                         or changing the concept, you can change the value of the data. It also has the ability to set a password, should someone click the edit option by mistake.
                         <br><br><br>
-                        <div class="collapse-image-sec">
+                        <div class="content-image">
                           <img src="./assets/images/Password.png" alt="grid" loading="lazy">
                         </div>
                         <br>
@@ -870,7 +876,7 @@
                 
                 <div class="collapse-content">
                   <div class="content-wrapper">
-                    <div class="collapse-text">
+                    <div class="content-text">
                       <p>This script was used by me and my team to quickly change materials and possibly prefab mesh on selected scenes, so that we don't have to switch to each scene.
                         Although a similar effect can be achieved with the prefab itself, once we have the same prefab on each scene we still have to change it everywhere.
                         <br>
@@ -879,11 +885,11 @@
                       </p>
                     </div>
                   </div>
-                  <div class="collapse-image-sec">
+                  <div class="content-image">
                     <img src="./assets/images/MMR_Main.png" alt="grid" loading="lazy">
                   </div>
                   <div >
-                    <div class="collapse-text">
+                    <div class="content-text">
                       <p>
                         I am working on a script to add a function to automatically add a new prefab of changed objects and automatically set it on each scene.
                         <br>
@@ -968,7 +974,7 @@
                 </ion-button>
                 <div class="collapse-content">
                   <div class="content-wrapper">
-                    <div class="collapse-text">
+                    <div class="content-text">
                       <p>This is a script I created myself to easily set levels in our Chesspeare game.
                         The most important element is **On Grid Position.** This is a tool that allows you to conveniently create figure settings for given levels.
 
@@ -982,7 +988,7 @@
                   </div>
                   
                   <div>
-                    <div class="collapse-text">
+                    <div class="content-text">
                       <p>
 
                       <h1 style="color: #EEF620"> The yellow box </h1>
@@ -1012,7 +1018,7 @@
                     <div class="collapse-image">
                       <img src="./assets/images/GridPosTool2.png" alt="grid" loading="lazy">
                     </div>
-                    <p class="collapse-text">The setting up of special fields is still included in the script and I would be happy to talk about how this section works in person.</p>
+                    <p class="content-text">The setting up of special fields is still included in the script and I would be happy to talk about how this section works in person.</p>
                   </div>
                 </div>
               </div>
@@ -1044,7 +1050,7 @@
                 </ion-button>
                 <div class="collapse-content">
                   <div class="content-wrapper">
-                    <div class="collapse-text">
+                    <div class="content-text">
                       <p>The LandMine was one of the first pleasures of programming for me. It was there that I used the principle of approaching an object and the trigger detecting the player's object, starting the corutin and after a while starting the detonation with a phased enlargement of the explosion zone to match the animation.<br>
                         <br>
                       I designed the operation of the mines, as well as their animation and the code itself, I programmed on my own already in my first year of study</p>
