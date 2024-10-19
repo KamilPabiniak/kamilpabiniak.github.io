@@ -1,7 +1,8 @@
 'use strict';
 
 // element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+const elementToggleFunc = function (element) 
+{ element.classList.toggle("active"); }
 
 
 
@@ -125,7 +126,7 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
-// page navigation variables
+// Page navigation functionality
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
