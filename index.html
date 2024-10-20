@@ -177,34 +177,61 @@
            section
           -->
 
-          <li class="service-item">
+          <!-- Example Project -->
+          <li class="service-item" onclick="openPopup('Project Title', 'Detailed project description here.', './path_to_main_image.jpg', ['./image1.jpg', './image2.jpg'])">
             <div class="special-icon">
               <ion-icon name="hammer-outline" size="large"></ion-icon>
             </div>
 
             <div class="service-content-box">
-              <h4 class="h4 service-item-title"> Don't Crash (Game Proto) - April 2024</h4>
-
+              <h4 class="h4 service-item-title">Project Title - Date</h4>
               <p class="service-item-text">
-                VR Assembling the toy car. In April, we started a VR project for college course credit.
-                <br>
-                The project similar on the game Bad Piggies with the difference that we would be in a toy factory, creating a vehicle for field testing. All in VR.
-                <br>
-                From the project I learned from the XR Interaction Toolkit and shaders and how to make them display images from different cameras on the scene.
-                At the moment the work is on hold. I can't share it, but I will be happy to tell you about our achievements.
+                Short description of the project.
               </p>
-
             </div>
-
-            <ul class="social-list">
-              
-            </ul>
-
           </li>
 
-            <!--
-             section
-            -->
+          <!-- Popup HTML -->
+          <div id="project-popup" class="popup">
+            <div class="popup-content">
+              <span class="popup-close" id="popup-close">&times;</span>
+
+              <div class="popup-header">
+                <img class="popup-image" src="./default_image.jpg" alt="Project Image">
+                <div class="popup-text">
+                  <h3 class="popup-title">Project Title</h3>
+                  <p class="popup-description">Detailed project information.</p>
+                </div>
+              </div>
+
+              <div class="popup-gallery">
+                <!-- Dynamically added gallery images will go here -->
+              </div>
+
+              <!-- Info button and collapsible content -->
+              <div class="collapse-container">
+                <ion-button class="collapse-btn">Show info</ion-button>
+                <div class="collapse-content">
+                  <div class="content-wrapper-no-flex">
+                    <div class="content-text">
+                      <div>
+                        Additional info about the project.
+                      </div>
+                    </div>
+                    <div class="content-image">
+                      <img src="./assets/images/extra_image.jpg" alt="Extra Image">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!--
+           section
+          -->
 
             <li class="service-item">
 

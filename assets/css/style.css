@@ -536,6 +536,79 @@ a:active {
   text-decoration: underline;
 }
 
+/**
+ * #popup
+ */
+
+/* Popup hidden by default */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 80%;
+  max-width: 1000px;
+  background-color: var(--onyx);
+  border-radius: 20px;
+  box-shadow: var(--shadow-3);
+  overflow-y: auto;
+}
+
+.popup.active {
+  display: block;
+}
+
+.popup-content {
+  padding: 20px;
+  max-height: 80vh;  
+  overflow-y: auto; 
+}
+
+.popup-header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.popup-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+
+.popup-text {
+  flex-grow: 1;
+}
+
+.popup-gallery {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.popup-gallery img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--white-2);
+}
+
+body.no-scroll {
+  overflow: hidden; 
+}
+
 
 
 /**

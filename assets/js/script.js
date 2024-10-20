@@ -113,4 +113,53 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+
+  // Popup function with dynamic gallery and info content
+  window.openPopup = function(title, description, imageUrl, galleryImages) {
+    document.querySelector(".popup-title").textContent = title;
+    document.querySelector(".popup-description").textContent = description;
+
+    // Set main image
+    const popupImage = document.querySelector(".popup-image");
+    if (imageUrl) {
+      popupImage.src = imageUrl;
+    }
+
+    // Set gallery images
+    const galleryContainer = document.querySelector(".popup-gallery");
+    galleryContainer.innerHTML = ''; // Clear existing gallery
+    galleryImages.forEach(imageSrc => {
+      const imgElement = document.createElement('img');
+      imgElement.src = imageSrc;
+      imgElement.alt = "Gallery Image";
+      galleryContainer.appendChild(imgElement);
+    });
+
+    // Show popup
+    const popup = document.getElementById("project-popup");
+    popup.classList.add("active");
+    document.body.classList.add("no-scroll");
+  }
+
+  // Close popup
+  const popup = document.getElementById("project-popup");
+  const closeBtn = document.getElementById("popup-close");
+
+  closeBtn.addEventListener("click", function () {
+    popup.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+  });
+
+  // Close popup if clicked outside
+  window.addEventListener("click", function (event) {
+    if (event.target === popup) {
+      popup.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    }
+  });
+
+
+
+
 });
