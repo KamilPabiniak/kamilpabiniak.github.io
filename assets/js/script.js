@@ -115,7 +115,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-  // Popup function with dynamic gallery and info content
+
+// Popup function to show the project-specific title, description, image, and gallery
   window.openPopup = function(title, description, imageUrl, galleryImages) {
     document.querySelector(".popup-title").textContent = title;
     document.querySelector(".popup-description").textContent = description;
@@ -130,15 +131,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const galleryContainer = document.querySelector(".popup-gallery");
     galleryContainer.innerHTML = ''; // Clear existing gallery
     galleryImages.forEach(imageObj => {
-      // Create image element
       const imgElement = document.createElement('img');
       imgElement.src = imageObj.src;
       imgElement.alt = imageObj.alt || "Gallery Image";
 
-      // Create image wrapper
       const imgWrapper = document.createElement('div');
       imgWrapper.classList.add('gallery-item');
-
       imgWrapper.appendChild(imgElement);
 
       if (imageObj.caption) {
@@ -164,36 +162,34 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => popup.classList.remove("fade-in"), 300);
   }
 
-// Close popup on click 'X'
+// Close popup on click 'X' and reset collapse state
   const popup = document.getElementById("project-popup");
   const closeBtn = document.getElementById("popup-close");
   const overlay = document.querySelector(".overlay");
 
-  closeBtn.addEventListener("click", function () {
+  closeBtn.addEventListener("click", closePopup);
+  overlay.addEventListener("click", closePopup);
+
+  function closePopup() {
     popup.classList.add("fade-out");
-    overlay.classList.remove("active"); // Hide overlay
+    overlay.classList.remove("active");
     document.body.classList.remove("no-scroll");
+
+    // Collapse 'Show info' section if it's open
+    const collapseContent = document.querySelector(".collapse-content");
+    const collapseButton = document.querySelector(".collapse-btn");
+
+    if (collapseContent.style.display === 'block') {
+      collapseContent.style.display = 'none';
+      collapseButton.textContent = 'Show info'; // Reset button text
+    }
 
     // After fade-out, hide popup
     setTimeout(() => {
       popup.classList.remove("active");
       popup.classList.remove("fade-out");
     }, 300);
-  });
-
-// Close popup if clicked outside
-  overlay.addEventListener("click", function () {
-    popup.classList.add("fade-out");
-    overlay.classList.remove("active");
-    document.body.classList.remove("no-scroll");
-
-    setTimeout(() => {
-      popup.classList.remove("active");
-      popup.classList.remove("fade-out");
-    }, 300);
-  });
-
-
-
+  }
+  
 
 });
