@@ -173,12 +173,18 @@
 
           <h3 class="h3 service-title">Projects</h3>
           
-          <!--
-           section
-          -->
-
           <!-- Example Project -->
-          <li class="service-item" onclick="openPopup('Project Title', 'Detailed project description here.', './path_to_main_image.jpg', ['./image1.jpg', './image2.jpg'])">
+          <li class="service-item" onclick="openPopup( 
+        'Project Title', 
+        'Detailed project description.', 
+        './path_to_main_image.jpg', 
+        [
+          { src: './assets/images/image1.jpg', alt: 'Image 1 Description', caption: 'First image caption' },
+          { src: './assets/images/image2.jpg', alt: 'Image 2 Description' },
+          { src: './assets/images/image3.jpg', alt: 'Image 3 Description', caption: 'Third image caption' },
+          { src: './assets/images/image3.jpg', alt: 'Image 4 Description', caption: 'Third image caption' }
+        ]
+      )">
             <div class="special-icon">
               <ion-icon name="hammer-outline" size="large"></ion-icon>
             </div>
@@ -226,6 +232,7 @@
               </div>
             </div>
           </div>
+
 
 
 

@@ -585,15 +585,30 @@ a:active {
 
 .popup-gallery {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 20px;
 }
 
-.popup-gallery img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 10px;
+.gallery-item {
+  width: 100px; /* Możesz dostosować rozmiar */
+  text-align: center;
+}
+
+.gallery-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-caption {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--light-gray);
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
 }
 
 .popup-close {

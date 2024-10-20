@@ -126,14 +126,32 @@ document.addEventListener('DOMContentLoaded', function() {
       popupImage.src = imageUrl;
     }
 
-    // Set gallery images
+    // Set gallery images with optional captions
     const galleryContainer = document.querySelector(".popup-gallery");
     galleryContainer.innerHTML = ''; // Clear existing gallery
-    galleryImages.forEach(imageSrc => {
+    galleryImages.forEach(imageObj => {
+      // Create image element
       const imgElement = document.createElement('img');
-      imgElement.src = imageSrc;
-      imgElement.alt = "Gallery Image";
-      galleryContainer.appendChild(imgElement);
+      imgElement.src = imageObj.src;
+      imgElement.alt = imageObj.alt || "Gallery Image";
+
+      // Create image wrapper
+      const imgWrapper = document.createElement('div');
+      imgWrapper.classList.add('gallery-item'); // Optionally add a class for styling
+
+      // Append image to wrapper
+      imgWrapper.appendChild(imgElement);
+
+      // Optionally add a caption
+      if (imageObj.caption) {
+        const captionElement = document.createElement('p');
+        captionElement.textContent = imageObj.caption;
+        captionElement.classList.add('gallery-caption'); // Class for caption styling
+        imgWrapper.appendChild(captionElement);
+      }
+
+      // Append wrapper to gallery container
+      galleryContainer.appendChild(imgWrapper);
     });
 
     // Show popup
@@ -141,23 +159,6 @@ document.addEventListener('DOMContentLoaded', function() {
     popup.classList.add("active");
     document.body.classList.add("no-scroll");
   }
-
-  // Close popup
-  const popup = document.getElementById("project-popup");
-  const closeBtn = document.getElementById("popup-close");
-
-  closeBtn.addEventListener("click", function () {
-    popup.classList.remove("active");
-    document.body.classList.remove("no-scroll");
-  });
-
-  // Close popup if clicked outside
-  window.addEventListener("click", function (event) {
-    if (event.target === popup) {
-      popup.classList.remove("active");
-      document.body.classList.remove("no-scroll");
-    }
-  });
 
 
 
