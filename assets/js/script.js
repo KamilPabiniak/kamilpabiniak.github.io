@@ -137,28 +137,61 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Create image wrapper
       const imgWrapper = document.createElement('div');
-      imgWrapper.classList.add('gallery-item'); // Optionally add a class for styling
+      imgWrapper.classList.add('gallery-item');
 
-      // Append image to wrapper
       imgWrapper.appendChild(imgElement);
 
-      // Optionally add a caption
       if (imageObj.caption) {
         const captionElement = document.createElement('p');
         captionElement.textContent = imageObj.caption;
-        captionElement.classList.add('gallery-caption'); // Class for caption styling
+        captionElement.classList.add('gallery-caption');
         imgWrapper.appendChild(captionElement);
       }
 
-      // Append wrapper to gallery container
       galleryContainer.appendChild(imgWrapper);
     });
 
-    // Show popup
+    // Show popup with overlay
     const popup = document.getElementById("project-popup");
+    const overlay = document.querySelector(".overlay");
+
     popup.classList.add("active");
+    popup.classList.add("fade-in");
+    overlay.classList.add("active");
     document.body.classList.add("no-scroll");
+
+    // Remove fade-in after animation
+    setTimeout(() => popup.classList.remove("fade-in"), 300);
   }
+
+// Close popup on click 'X'
+  const popup = document.getElementById("project-popup");
+  const closeBtn = document.getElementById("popup-close");
+  const overlay = document.querySelector(".overlay");
+
+  closeBtn.addEventListener("click", function () {
+    popup.classList.add("fade-out");
+    overlay.classList.remove("active"); // Hide overlay
+    document.body.classList.remove("no-scroll");
+
+    // After fade-out, hide popup
+    setTimeout(() => {
+      popup.classList.remove("active");
+      popup.classList.remove("fade-out");
+    }, 300);
+  });
+
+// Close popup if clicked outside
+  overlay.addEventListener("click", function () {
+    popup.classList.add("fade-out");
+    overlay.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+
+    setTimeout(() => {
+      popup.classList.remove("active");
+      popup.classList.remove("fade-out");
+    }, 300);
+  });
 
 
 

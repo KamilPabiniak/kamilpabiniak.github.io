@@ -172,30 +172,34 @@
         <section class="service">
 
           <h3 class="h3 service-title">Projects</h3>
-          
-          <!-- Example Project -->
-          <li class="service-item" onclick="openPopup( 
-        'Project Title', 
-        'Detailed project description.', 
-        './path_to_main_image.jpg', 
-        [
-          { src: './assets/images/image1.jpg', alt: 'Image 1 Description', caption: 'First image caption' },
-          { src: './assets/images/image2.jpg', alt: 'Image 2 Description' },
-          { src: './assets/images/image3.jpg', alt: 'Image 3 Description', caption: 'Third image caption' },
-          { src: './assets/images/image3.jpg', alt: 'Image 4 Description', caption: 'Third image caption' }
-        ]
-      )">
-            <div class="special-icon">
-              <ion-icon name="hammer-outline" size="large"></ion-icon>
-            </div>
 
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Project Title - Date</h4>
-              <p class="service-item-text">
-                Short description of the project.
-              </p>
-            </div>
-          </li>
+          <!-- Example Project -->
+          <ul>
+            <li class="service-item" onclick="openPopup( 
+            'Project Title', 
+            'Detailed project description.', 
+            './path_to_main_image.jpg', 
+            [
+              { src: './assets/images/image1.jpg', alt: 'Image 1 Description', caption: 'First image caption' },
+              { src: './assets/images/image2.jpg', alt: 'Image 2 Description' },
+              { src: './assets/images/image3.jpg', alt: 'Image 3 Description', caption: 'Third image caption' }
+            ]
+          )">
+              <div class="special-icon">
+                <ion-icon name="hammer-outline" size="large"></ion-icon>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Project Title - Date</h4>
+                <p class="service-item-text">
+                  Short description of the project.
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Overlay for background dimming -->
+          <div class="overlay"></div>
 
           <!-- Popup HTML -->
           <div id="project-popup" class="popup">
