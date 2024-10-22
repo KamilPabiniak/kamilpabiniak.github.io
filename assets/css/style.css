@@ -44,7 +44,7 @@
   --bg-gradient-jet-half: linear-gradient(
           to bottom right,
           hsla(240, 1%, 0%, 0) 0%,
-          hsla(240, 0%, 100%, 2) 200%
+          hsla(35, 90%, 70%, 2) 200%
   );
   
 
@@ -78,7 +78,7 @@
   --name-fs: 40px;
   --fs-4: 16px;
   --fs-5: 15px;
-  --fs-6: 14px;
+  --serviceText-fs: 14px;
   --fs-7: 13px;
   --button-fs: 40px;
   --title-fs: 18px;
@@ -481,7 +481,7 @@ main {
 .navbar-link {
   color: var(--light-gray);
   font-size: var(--button-fs);
-  padding: 20px 7px;
+  padding: 20px 10px;
   transition: color var(--transition-1);
 }
 
@@ -502,7 +502,7 @@ main {
 
 .about-text {
   color: var(--light-gray);
-  font-size: var(--fs-6);
+  font-size: var(--serviceText-fs);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
@@ -546,7 +546,7 @@ a:link {
 }
 
 a:visited {
-  color: var(--grey-gold);
+  color: var(--orange-yellow-crayola);
   background-color: transparent;
   text-decoration: none;
 }
@@ -702,6 +702,12 @@ body.no-scroll {
   z-index: -1;
 }
 
+.service-item:hover {
+  background: var(--text-gradient-yellow);
+  cursor: pointer;
+
+}
+
 .service-icon-box { margin-bottom: 10px; }
 
 .service-icon-box img { margin: auto; }
@@ -712,7 +718,7 @@ body.no-scroll {
 
 .service-item-text {
   color: var(--light-gray);
-  font-size: var(--fs-6);
+  font-size: var(--serviceText-fs);
   line-height: 1.6;
 }
 
@@ -723,9 +729,10 @@ body.no-scroll {
   margin-right: 5px;
 }
 
+
 .service-image {
-  width: 100%;
-  height: 100%;
+  width: 170px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
   position: relative;
@@ -738,8 +745,8 @@ body.no-scroll {
   right: 0;
   width: 100%; 
   height: 100%;
+  border-radius: 10px;
   background: var(--bg-gradient-jet-half);
-  border-radius: 4px; 
 }
 
 .special-icon {margin-bottom: 10px; }
@@ -802,7 +809,7 @@ body.no-scroll {
   padding: 12px 16px;
   border: 1px solid var(--jet);
   border-radius: 14px;
-  font-size: var(--fs-6);
+  font-size: var(--serviceText-fs);
   font-weight: var(--fw-300);
 }
 
@@ -832,7 +839,7 @@ body.no-scroll {
 .select-item button {
   background: var(--eerie-black-2);
   color: var(--light-gray);
-  font-size: var(--fs-6);
+  font-size: var(--serviceText-fs);
   font-weight: var(--fw-300);
   text-transform: capitalize;
   width: 100%;
@@ -988,7 +995,7 @@ body.no-scroll {
 
 .achievements-category {
   color: var(--light-gray-70);
-  font-size: var(--fs-6);
+  font-size: var(--serviceText-fs);
   font-weight: var(--fw-300);
   margin-bottom: 20px;
 }
@@ -1137,7 +1144,7 @@ body.no-scroll {
 }
 
 .timeline-list {
-  font-size: var(--fs-6);
+  font-size: var(--serviceText-fs);
   margin-left: 45px;
 }
 
@@ -1146,7 +1153,7 @@ body.no-scroll {
 .timeline-item:not(:last-child) { margin-bottom: 20px; }
 
 .timeline-item-title {
-  font-size: var(--fs-6);
+  font-size: var(--serviceText-fs);
   line-height: 1.3;
   margin-bottom: 7px;
 }
@@ -1295,7 +1302,7 @@ body.no-scroll {
     --fs-2: 24px;
     --name-fs: 26px;
     --fs-4: 18px;
-    --fs-6: 15px;
+    --serviceText-fs: 14px;
     --fs-7: 15px;
     --button-fs: 12px;
 
@@ -1420,11 +1427,13 @@ body.no-scroll {
 
   .service-item {
     display: flex;
+    height: 300px;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 18px;
     padding: 30px;
   }
+  
 
   .service-icon-box {
     margin-bottom: 0;
@@ -1432,6 +1441,8 @@ body.no-scroll {
   }
 
   .service-content-box { text-align: left; }
+
+ 
   
   /* clients */
 
@@ -1495,7 +1506,7 @@ body.no-scroll {
   textarea.form-input { margin-bottom: 30px; }
 
   .form-btn {
-    --fs-6: 16px;
+    --serviceText-fs: 16px;
     padding: 16px 20px;
   }
 
