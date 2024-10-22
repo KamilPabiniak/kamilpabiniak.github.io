@@ -676,6 +676,33 @@ body.no-scroll {
 
 .service-title { margin-bottom: 15px; }
 
+.service-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.service-skill-item {
+  background-color: #333; 
+  border: 2px solid #555;
+  height: 30px;
+  border-radius: 6px;
+  padding: 0 10px;
+  display: inline-flex;
+ 
+}
+
+.service-skill-item-text {
+  color: #f0f0f0; 
+  font-size: 16px;
+  text-align: center;
+  align-items: center;
+  justify-content: center; 
+  line-height: 1.6;
+  margin: 0; 
+}
+
+
 .service-list {
   display: grid;
   grid-template-columns: 1fr;
