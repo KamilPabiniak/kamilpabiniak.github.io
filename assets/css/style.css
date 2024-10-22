@@ -76,7 +76,7 @@
   --fs-1: 24px;
   --fs-2: 18px;
   --name-fs: 40px;
-  --fs-4: 16px;
+  --popup-fs: 14px;
   --fs-5: 15px;
   --serviceText-fs: 14px;
   --fs-7: 13px;
@@ -182,7 +182,7 @@ article {
 
 .special-icon {
   margin-bottom: 0;
-  margin-top: 0px;
+  margin-top: 0;
   color: var(--orange-yellow-crayola);
 }
 
@@ -236,7 +236,7 @@ article.active {
 
 .h3 { font-size: var(--fs-2); }
 
-.h4 { font-size: var(--fs-4); }
+.h4 { font-size: var(--popup-fs); }
 
 .h5 {
   font-size: var(--fs-7);
@@ -345,7 +345,6 @@ main {
   font-size: var(--name-fs);
   font-weight: var(--fw-800);
   letter-spacing: -0.25px;
-  margin-bottom: 10px;
 }
 
 .info-content .title {
@@ -620,7 +619,7 @@ a:active {
 }
 
 .popup-description {
-  font-size: var(--fs-4);
+  font-size: var(--popup-fs);
   color: var(--light-gray);
   margin-bottom: 20px;
 }
@@ -744,9 +743,13 @@ body.no-scroll {
 .service-item-title { margin-bottom: 7px; }
 
 .service-item-text {
+  margin-top: 5px;
+  margin-right: 20px;
   color: var(--light-gray);
   font-size: var(--serviceText-fs);
   line-height: 1.6;
+  text-align: justify; /* Justowanie tekstu */
+  max-width: 800px; /* Ograniczenie szerokości tekstu */
 }
 
 
@@ -778,6 +781,48 @@ body.no-scroll {
 
 .special-icon {margin-bottom: 10px; }
 
+
+/**
+  * #projects-links
+ */
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px; 
+  padding-bottom: 4px;
+  padding-left: 7px;
+  list-style-type: none;
+}
+
+.link-items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.project-top-data {
+  display: flex;
+  align-items: center;
+}
+
+.service-item-title {
+  margin-right: 10px; 
+  font-size: 18px; 
+}
+
+.project-top-data a {
+  display: inline-flex; 
+  color: var(--orange-yellow-crayola);
+  font-size: 24px;
+}
+
+.project-top-data a:hover {
+  color: var(--light-gray);
+}
 
 
 /**
@@ -1328,7 +1373,7 @@ body.no-scroll {
     --fs-1: 32px;
     --fs-2: 24px;
     --name-fs: 26px;
-    --fs-4: 18px;
+    --popup-fs: 18px;
     --serviceText-fs: 14px;
     --fs-7: 15px;
     --button-fs: 12px;
@@ -1344,7 +1389,7 @@ body.no-scroll {
   .sidebar, article {
     width: 520px;
     margin-inline: auto;
-    padding: 30px;
+    padding: 25px;
   }
 
   .article-title {
