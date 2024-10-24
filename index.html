@@ -134,8 +134,8 @@
             <button class="navbar-link" data-nav-link>Resume</button>
           </li>
           
-            <li class="">
-              <button class="" data-nav-link title="CV Download"><p title="This is some extra text"><a href="./assets/files/CV%20Kamil%20Pabiniak%202024.pdf" ><ion-icon name="arrow-down-circle-outline" size="large"></ion-icon></a></p></button>
+            <li class="navbar-item">
+              <button class="" data-nav-link title="CV Download"><a href="./assets/files/CV%20Kamil%20Pabiniak%202024.pdf" style="color:lightgrey;" download><b>CV</b></a></button>
           </li>
 
         </ul>
@@ -263,6 +263,25 @@
                   </a>
                 </li>
               </ul>
+                <div class="service-skill-list">
+                  
+                  <div class="service-skill-item-small">
+                    <p class="service-skill-item-text-small">Unity</p>
+                  </div>
+
+                  <div class="service-skill-item-small">
+                    <p class="service-skill-item-text-small">C#</p>
+                  </div>
+
+                  <div class="service-skill-item-small">
+                    <p class="service-skill-item-text-small">Editors</p>
+                  </div>
+                  
+                  <div class="service-skill-item-small">
+                    <p class="service-skill-item-text-small">Tools Creation</p>
+                  </div>
+
+                </div>
                 <p class="service-item-text">
                   For the past few months, we have been working with a team made up of university students on a game in the climate of puppet theatre with chess rules.
                   The most similar game to ours mechanically is the game "Pawnbarian". 
@@ -277,421 +296,438 @@
 
           <!-- Popup Chesspeares -->
           <div id="chesspeares-p" class="popup">
-            <div class="popup-content">
-              <span class="popup-close">&times;</span>
-              <div class="popup-header">
-                <img class="popup-image" src="./assets/images/23.jpg" alt="Chesspeares Image">
-                <div class="popup-text">
-                  <h3 class="popup-title">Chesspeares - October 2023</h3>
-                  <p class="popup-description">
-                    For the past few months, we have been working with a team made up of university students on a game...
-                  </p>
+            <div class="popup-scroll-content">
+              <div class="popup-content">
+                <span class="popup-close">&times;</span>
+                <div class="popup-header">
+                    <div class="popup-text">
+                      <h3 class="popup-title">Chesspeares - October 2023</h3>
+    
+                      <div class="popup-info">
+                        <div class="popup-info-item">
+                          <p><strong style="color: #f2d76b">Team Size:</strong> 5</p>
+                        </div>
+                        <div class="popup-info-item">
+                          <p><strong style="color: #f2d76b">Duration:</strong> 3 months</p>
+                        </div>
+                        <div class="popup-info-item">
+                          <p><strong style="color: #f2d76b">Engine:</strong> Unity</p>
+                        </div>
+                      </div>
+                      <img class="popup-image" src="./assets/images/23.jpg" alt="Chesspeares Image">
+                    </div>
+                  
                 </div>
+                <div class="popup-gallery">
+                  <div class="gallery-item">
+                    <img src="./assets/images/chesspeare/okj40H.jpg" alt="Chesspeares Image 1">
+                    <p class="gallery-caption">First image caption</p>
+                  </div>
+                  <div class="gallery-item">
+                    <img src="./assets/images/image2.jpg" alt="Chesspeares Image 2">
+                  </div>
+                  <div class="gallery-item">
+                    <img src="./assets/images/image3.jpg" alt="Chesspeares Image 3">
+                    <p class="gallery-caption">Third image caption</p>
+                  </div>
+                </div>
+                <br>
+                <h3 class="h4 service-title">Description</h3>
+                <p class="popup-description">
+                  For the past few months, we have been working with a team made up of university students on a game...
+                </p>
+  
+  
+                <section>
+                  <ul class="filter-list">
+  
+                    <li class="filter-item">
+                      <button class="active" data-filter-btn>All</button>
+                    </li>
+  
+                    <li class="filter-item">
+                      <button data-filter-btn>Chesspeare</button>
+                    </li>
+  
+                  </ul>
+  
+                  <div class="filter-select-box">
+  
+                    <button class="filter-select" data-select>
+  
+                      <div class="select-value" data-selecct-value>Select category</div>
+  
+                      <div class="select-icon">
+                        <ion-icon name="chevron-down"></ion-icon>
+                      </div>
+  
+                    </button>
+  
+                    <ul class="select-list">
+  
+                      <li class="select-item">
+                        <button data-select-item>All</button>
+                      </li>
+  
+                      <li class="select-item">
+                        <button data-select-item>Chesspeare</button>
+                      </li>
+  
+                    </ul>
+                  </div>
+  
+  
+                  <ul class="achievements-list">
+  
+                    <li class="achievements-item-passive" data-filter-item data-category="chesspeare">
+                      <a>
+                        <figure class="achievements-img">
+                          <img src="./assets/images/Dialogue.gif" alt="grid" loading="lazy">
+                        </figure>
+                        <h3 class="achievements-title">Script - Global Data for Characters in game</h3>
+  
+                        <p class="achievements-category">Chesspeare</p>
+                      </a>
+                      <!-- #Info button  -->
+                      <div class="collapse-container">
+                        <ion-button class="collapse-btn">
+                          Show info
+                        </ion-button>
+  
+                        <div class="collapse-content">
+                          <div class="content-wrapper">
+                            <div class="content-text">
+                              <p>
+                              <div class="content-image">
+                                <img src="./assets/images/CharactersData.png" alt="grid" loading="lazy">
+                              </div>
+                              There will be various characters in the Chesspeare game and it was known that it would be necessary to develop a system efficient enough
+                              to be able to receive new information about the characters from anywhere and implement an action, i.e. recreate the dialogue with the appropriate character.
+                              </p>
+                            </div>
+                          </div>
+                          <div class="content-wrapper">
+                            <div class="content-text">
+                              <p>
+                                The script loads the character data (appearance and name) and then supplies it to the dialogue script.
+                                <br>
+                                Classes receiving data can choose a character and write a dialogue.
+                                <br>
+                                For example, a class on starting dialogues:
+                                <br><br><br>
+  
+                              <div class="content-image">
+                                <img src="./assets/images/StartDialogue.png" alt="grid" loading="lazy">
+                              </div>
+                              <br>
+                              Characters are provided in the form of an enum, so the designer can easily select them without unnecessary typing of character names.
+                              We choose the side on which the character is speaking and enter the character's dialogue below.
+                              <br>
+                              Limit of 180 characters due to translations and the size of the dialogue grid that a 1920 x 1080p screen can accommodate (This may change later).
+                              <br>
+                              You can always remove the dialogue using the Remove button next to the character name
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+  
+                    <!--
+                    Enter
+                    -->
+  
+                    <li class="achievements-item-passive" data-filter-item data-category="chesspeare">
+                      <a>
+                        <figure class="achievements-img">
+  
+                          <img src="./assets/images/BotMoves.gif" alt="grid" loading="lazy">
+  
+                        </figure>
+                        <h3 class="achievements-title">Moves Factories for Bots - script</h3>
+  
+                        <p class="achievements-category">Chesspeare</p>
+                      </a>
+                      <!-- #Info button  -->
+  
+                      <div class="collapse-container">
+                        <ion-button class="collapse-btn">
+                          Show info
+                        </ion-button>
+  
+                        <div class="collapse-content">
+                          <div class="content-wrapper">
+                            <div class="content-text">
+                              <p>
+                                I programmed scripts to trigger movement for our game's AI. But as we know figures in chess have different movement strategies,
+                                and that's why I used such a way to easily implement movement rules and add possible new rules (e.g. wild figures in chess)
+                              </p>
+                            </div>
+                          </div>
+                          <div class="content-image">
+                            <img src="./assets/images/Factories.png" alt="grid" loading="lazy">
+                          </div>
+                          <div >
+                            <div class="content-text">
+                              <p>
+                                <br>
+                                Example script that uses the factoria class:
+                                <br>
+                                <br>
+                                <br>
+                              <div class="content-image">
+                                <img src="./assets/images/LineMoveExecuter.png" alt="grid" loading="lazy">
+                              </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+  
+  
+                    <!--
+                     Enter
+                     -->
+  
+                    <li class="achievements-item-passive" data-filter-item data-category="chesspeare">
+                      <a>
+                        <figure class="achievements-img">
+  
+                          <img src="./assets/images/Header&Locker.png" alt="grid" loading="lazy">
+  
+                        </figure>
+                        <h3 class="achievements-title">Better header & Lock on edits - attributes script</h3>
+  
+                        <p class="achievements-category">Chesspeare</p>
+                      </a>
+                      <!-- #Info button  -->
+  
+                      <div class="collapse-container">
+                        <ion-button class="collapse-btn">
+                          Show info
+                        </ion-button>
+  
+                        <div class="collapse-content">
+                          <div class="content-wrapper">
+                            <div class="content-text">
+                              <p style="color: red">
+                                <b>Before I am accused of something. The screenshot was scaled by AI so that I could show my work in better quality.
+                                  I know it is not equal but if anyone wants proof of the creation of these attributes I will be happy to show them.
+                                </b>>
+                                <br>
+                              </p>
+                            </div>
+                            <div class="content-image">
+                              <img src="./assets/images/Header&Locker_Oryginal.png" alt="grid" loading="lazy">
+                            </div>
+                          </div>
+                          <div >
+                            <div class="content-text">
+                              <p>
+                                <br>
+                                At some point in the project, there was a need to better title declarations and better label them in the inspector.
+                                Therefore, I created Header 2.0 to support the designer's work and make it easier for him to discern in the inspector with colors and font sizes.
+                                <br><br>
+                                In addition, as part of the initiative, I added an attribute that blocks editing and at the same time can continue
+                                <br>
+                                to show variables in the declaration to facilitate the work in testing. The attribute has the ability to edit so that if anything happens during testing
+                                <br>
+                                or changing the concept, you can change the value of the data. It also has the ability to set a password, should someone click the edit option by mistake.
+                                <br><br><br>
+                              <div class="content-image">
+                                <img src="./assets/images/Password.png" alt="grid" loading="lazy">
+                              </div>
+                              <br>
+                              The password is set in the attribute and is not mandatory.
+                              <br><br>
+                              These are small things, but they help nicely in work
+                              <br>
+                              and it's good support for my project on which I am working in the team.
+                              <br>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+  
+                    <!--
+                    Enter
+                    -->
+  
+                    <li class="achievements-item-passive" data-filter-item data-category="chesspeare">
+                      <a>
+                        <figure class="achievements-img">
+  
+                          <img src="./assets/images/Material&Mesh_Replacer.png" alt="grid" loading="lazy">
+  
+                        </figure>
+                        <h3 class="achievements-title">Material&Mesh Replacer - editor script</h3>
+  
+                        <p class="achievements-category">Chesspeare</p>
+                      </a>
+                      <!-- #Info button  -->
+  
+                      <div class="collapse-container">
+                        <ion-button class="collapse-btn">
+                          Show info
+                        </ion-button>
+  
+                        <div class="collapse-content">
+                          <div class="content-wrapper">
+                            <div class="content-text">
+                              <p>This script was used by me and my team to quickly change materials and possibly prefab mesh on selected scenes, so that we don't have to switch to each scene.
+                                Although a similar effect can be achieved with the prefab itself, once we have the same prefab on each scene we still have to change it everywhere.
+                                <br>
+                                <br>
+                                This tool was just meant to make the process easier, so that graphic designers can quickly examine whether a particular texture or mesh is appropriate and do all the work on all the scenes with literally 4/5 clicks.
+                              </p>
+                            </div>
+                          </div>
+                          <div class="content-image">
+                            <img src="./assets/images/MMR_Main.png" alt="grid" loading="lazy">
+                          </div>
+                          <div >
+                            <div class="content-text">
+                              <p>
+                                I am working on a script to add a function to automatically add a new prefab of changed objects and automatically set it on each scene.
+                                <br>
+                                Work in progress
+                                <br>
+                                The instructions for this tool are as follows:
+                                <br>
+                                <br>
+                                1. Prefab to Search:
+                                <br>
+                                - Select the prefab you want to search.
+                                <br>
+                                <br>
+                                2. Material to Replace With:
+                                <br>
+                                - Select the material from the project resources that you want to assign to the prefab.
+                                <br>
+                                <br>
+                                3. Replace Mesh (optional):
+                                <br>
+                                - Check the 'Replace Mesh' option and select the mesh from the project resources that you want to assign to the prefab.
+                                <br>
+                                <br>
+                                4. Scenes to Search:
+                                <br>
+                                - Select the scenes you want to search.
+                                <br>
+                                <br>
+                                5. 'Replace Material and Mesh' Button:
+                                <br>
+                                - After selecting the prefab, material, mesh (optional), and scenes, click the 'Replace Material and Mesh' button to start the process of replacing the material and/or mesh.
+                                <br>
+                                - Replacing material and/or mesh in prefab instances:
+                                <br>
+                                - The tool searches the selected scenes and replaces the material and/or mesh in all instances of the prefab.
+                                <br>
+                                <br>
+                                Example:
+                                <br>
+                                Let's say you want to replace the material CatMaterial and the mesh CatMesh in all instances of the CatPrefab in the selected scenes:
+                                <br>
+                                1. Select CatPrefab in the 'Prefab to Search' field.
+                                <br>
+                                2. Select CatMaterial in the 'Material to Replace With' field.
+                                <br>
+                                3. Check 'Replace Mesh' and select CatMesh in the 'Mesh to Replace With' field.
+                                <br>
+                                4. Select the appropriate scenes in the 'Scenes to Search' section.
+                                <br>
+                                5. Click the 'Replace Material and Mesh' button.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+  
+                    <!--
+                    Enter
+                    -->
+  
+                    <li class="achievements-item-passive" data-filter-item data-category="chesspeare">
+                      <a>
+                        <figure class="achievements-img">
+                          <div class="achievements-item-icon-box">
+                            <ion-icon name="eye-outline"></ion-icon>
+                          </div>
+  
+                          <img src="./assets/images/gridPos.gif" alt="grid" loading="lazy">
+  
+                        </figure>
+                        <h3 class="achievements-title">Grid Position Set - script</h3>
+  
+                        <p class="achievements-category">Chesspeare</p>
+                      </a>
+  
+                      <!-- #Info button  -->
+  
+                      <div class="collapse-container">
+                        <ion-button class="collapse-btn">
+                          Show info
+                        </ion-button>
+                        <div class="collapse-content">
+                          <div class="content-wrapper">
+                            <div class="content-text">
+                              <p>This is a script I created myself to easily set levels in our Chesspeare game.
+                                The most important element is **On Grid Position.** This is a tool that allows you to conveniently create figure settings for given levels.
+  
+                                Initially the fields look like this:
+                              </p>
+                            </div>
+                          </div>
+  
+                          <div class="collapse-image">
+                            <img src="./assets/images/GridPosTool.png" alt="grid" loading="lazy">
+                          </div>
+  
+                          <div>
+                            <div class="content-text">
+                              <p>
+  
+                              <h1 style="color: #EEF620"> The yellow box </h1>
+                              is our chosen field in the editor. Black is the initial position of our King. The white boxes are
+                              those already occupied by enemy figures and the blue boxes are special boxes. An empty field has
+                              an unchecked "*Set Chess*" box.
+  
+                              We can then choose whether to place a figure or a special field on that field.
+  
+                              <p>
+  
+                              <h1 style="color: skyblue"> In the blue area </h1>
+                              we must have ticked:
+                              **Chess/Objects**: Chess (i.e. an indication that we are placing a figure).
+                              **Choose colour**: White (if we are placing an enemy figure) or Black (if our King).
+                              **Choose chesstype**: Here we indicate the specific type of figure we want.
+  
+                              <h1 style="color: #19F181">The green area </h1>
+                              is **Moves Data**. For all figures except pawns (*Pawn*) we need to fill in this area. It contains
+                              a list of the subsequent moves that the figure will want to make. Subsequent moves are described
+                              by changes on the X/Z axis in relation to the figure's current position on the board.
+  
+                              Note: this is the move the figure wants to make. It may differ from the actual one if the figure's
+                              movement is affected by elements such as special fields, knockdown or special rules of the world.
+  
+                            </div>
+                            <div class="collapse-image">
+                              <img src="./assets/images/GridPosTool2.png" alt="grid" loading="lazy">
+                            </div>
+                            <p class="content-text">The setting up of special fields is still included in the script and I would be happy to talk about how this section works in person.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+  
+                  </ul>
+                </section>
               </div>
-              <div class="popup-gallery">
-                <div class="gallery-item">
-                  <img src="./assets/images/chesspeare/okj40H.jpg" alt="Chesspeares Image 1">
-                  <p class="gallery-caption">First image caption</p>
-                </div>
-                <div class="gallery-item">
-                  <img src="./assets/images/image2.jpg" alt="Chesspeares Image 2">
-                </div>
-                <div class="gallery-item">
-                  <img src="./assets/images/image3.jpg" alt="Chesspeares Image 3">
-                  <p class="gallery-caption">Third image caption</p>
-                </div>
-              </div>
-
             </div>
-            
-            <section>
-              <ul class="filter-list">
-
-                <li class="filter-item">
-                  <button class="active" data-filter-btn>All</button>
-                </li>
-
-                <li class="filter-item">
-                  <button data-filter-btn>Chesspeare</button>
-                </li>
-
-              </ul>
-
-              <div class="filter-select-box">
-
-                <button class="filter-select" data-select>
-
-                  <div class="select-value" data-selecct-value>Select category</div>
-
-                  <div class="select-icon">
-                    <ion-icon name="chevron-down"></ion-icon>
-                  </div>
-
-                </button>
-
-                <ul class="select-list">
-
-                  <li class="select-item">
-                    <button data-select-item>All</button>
-                  </li>
-
-                  <li class="select-item">
-                    <button data-select-item>Chesspeare</button>
-                  </li>
-
-                </ul>
-              </div>
-
-
-              <ul class="achievements-list">
-
-                <li class="achievements-item-passive" data-filter-item data-category="chesspeare">
-                  <a>
-                    <figure class="achievements-img">
-                      <img src="./assets/images/Dialogue.gif" alt="grid" loading="lazy">
-                    </figure>
-                    <h3 class="achievements-title">Script - Global Data for Characters in game</h3>
-
-                    <p class="achievements-category">Chesspeare</p>
-                  </a>
-                  <!-- #Info button  -->
-                  <div class="collapse-container">
-                    <ion-button class="collapse-btn">
-                      Show info
-                    </ion-button>
-
-                    <div class="collapse-content">
-                      <div class="content-wrapper">
-                        <div class="content-text">
-                          <p>
-                          <div class="content-image">
-                            <img src="./assets/images/CharactersData.png" alt="grid" loading="lazy">
-                          </div>
-                          There will be various characters in the Chesspeare game and it was known that it would be necessary to develop a system efficient enough
-                          to be able to receive new information about the characters from anywhere and implement an action, i.e. recreate the dialogue with the appropriate character.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="content-wrapper">
-                        <div class="content-text">
-                          <p>
-                            The script loads the character data (appearance and name) and then supplies it to the dialogue script.
-                            <br>
-                            Classes receiving data can choose a character and write a dialogue.
-                            <br>
-                            For example, a class on starting dialogues:
-                            <br><br><br>
-
-                          <div class="content-image">
-                            <img src="./assets/images/StartDialogue.png" alt="grid" loading="lazy">
-                          </div>
-                          <br>
-                          Characters are provided in the form of an enum, so the designer can easily select them without unnecessary typing of character names.
-                          We choose the side on which the character is speaking and enter the character's dialogue below.
-                          <br>
-                          Limit of 180 characters due to translations and the size of the dialogue grid that a 1920 x 1080p screen can accommodate (This may change later).
-                          <br>
-                          You can always remove the dialogue using the Remove button next to the character name
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <!--
-                Enter
-                -->
-
-                <li class="achievements-item-passive" data-filter-item data-category="chesspeare">
-                  <a>
-                    <figure class="achievements-img">
-
-                      <img src="./assets/images/BotMoves.gif" alt="grid" loading="lazy">
-
-                    </figure>
-                    <h3 class="achievements-title">Moves Factories for Bots - script</h3>
-
-                    <p class="achievements-category">Chesspeare</p>
-                  </a>
-                  <!-- #Info button  -->
-
-                  <div class="collapse-container">
-                    <ion-button class="collapse-btn">
-                      Show info
-                    </ion-button>
-
-                    <div class="collapse-content">
-                      <div class="content-wrapper">
-                        <div class="content-text">
-                          <p>
-                            I programmed scripts to trigger movement for our game's AI. But as we know figures in chess have different movement strategies,
-                            and that's why I used such a way to easily implement movement rules and add possible new rules (e.g. wild figures in chess)
-                          </p>
-                        </div>
-                      </div>
-                      <div class="content-image">
-                        <img src="./assets/images/Factories.png" alt="grid" loading="lazy">
-                      </div>
-                      <div >
-                        <div class="content-text">
-                          <p>
-                            <br>
-                            Example script that uses the factoria class:
-                            <br>
-                            <br>
-                            <br>
-                          <div class="content-image">
-                            <img src="./assets/images/LineMoveExecuter.png" alt="grid" loading="lazy">
-                          </div>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-
-                <!--
-                 Enter
-                 -->
-
-                <li class="achievements-item-passive" data-filter-item data-category="chesspeare">
-                  <a>
-                    <figure class="achievements-img">
-
-                      <img src="./assets/images/Header&Locker.png" alt="grid" loading="lazy">
-
-                    </figure>
-                    <h3 class="achievements-title">Better header & Lock on edits - attributes script</h3>
-
-                    <p class="achievements-category">Chesspeare</p>
-                  </a>
-                  <!-- #Info button  -->
-
-                  <div class="collapse-container">
-                    <ion-button class="collapse-btn">
-                      Show info
-                    </ion-button>
-
-                    <div class="collapse-content">
-                      <div class="content-wrapper">
-                        <div class="content-text">
-                          <p style="color: red">
-                            <b>Before I am accused of something. The screenshot was scaled by AI so that I could show my work in better quality.
-                              I know it is not equal but if anyone wants proof of the creation of these attributes I will be happy to show them.
-                            </b>>
-                            <br>
-                          </p>
-                        </div>
-                        <div class="content-image">
-                          <img src="./assets/images/Header&Locker_Oryginal.png" alt="grid" loading="lazy">
-                        </div>
-                      </div>
-                      <div >
-                        <div class="content-text">
-                          <p>
-                            <br>
-                            At some point in the project, there was a need to better title declarations and better label them in the inspector.
-                            Therefore, I created Header 2.0 to support the designer's work and make it easier for him to discern in the inspector with colors and font sizes.
-                            <br><br>
-                            In addition, as part of the initiative, I added an attribute that blocks editing and at the same time can continue
-                            <br>
-                            to show variables in the declaration to facilitate the work in testing. The attribute has the ability to edit so that if anything happens during testing
-                            <br>
-                            or changing the concept, you can change the value of the data. It also has the ability to set a password, should someone click the edit option by mistake.
-                            <br><br><br>
-                          <div class="content-image">
-                            <img src="./assets/images/Password.png" alt="grid" loading="lazy">
-                          </div>
-                          <br>
-                          The password is set in the attribute and is not mandatory.
-                          <br><br>
-                          These are small things, but they help nicely in work
-                          <br>
-                          and it's good support for my project on which I am working in the team.
-                          <br>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <!--
-                Enter
-                -->
-
-                <li class="achievements-item-passive" data-filter-item data-category="chesspeare">
-                  <a>
-                    <figure class="achievements-img">
-
-                      <img src="./assets/images/Material&Mesh_Replacer.png" alt="grid" loading="lazy">
-
-                    </figure>
-                    <h3 class="achievements-title">Material&Mesh Replacer - editor script</h3>
-
-                    <p class="achievements-category">Chesspeare</p>
-                  </a>
-                  <!-- #Info button  -->
-
-                  <div class="collapse-container">
-                    <ion-button class="collapse-btn">
-                      Show info
-                    </ion-button>
-
-                    <div class="collapse-content">
-                      <div class="content-wrapper">
-                        <div class="content-text">
-                          <p>This script was used by me and my team to quickly change materials and possibly prefab mesh on selected scenes, so that we don't have to switch to each scene.
-                            Although a similar effect can be achieved with the prefab itself, once we have the same prefab on each scene we still have to change it everywhere.
-                            <br>
-                            <br>
-                            This tool was just meant to make the process easier, so that graphic designers can quickly examine whether a particular texture or mesh is appropriate and do all the work on all the scenes with literally 4/5 clicks.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="content-image">
-                        <img src="./assets/images/MMR_Main.png" alt="grid" loading="lazy">
-                      </div>
-                      <div >
-                        <div class="content-text">
-                          <p>
-                            I am working on a script to add a function to automatically add a new prefab of changed objects and automatically set it on each scene.
-                            <br>
-                            Work in progress
-                            <br>
-                            The instructions for this tool are as follows:
-                            <br>
-                            <br>
-                            1. Prefab to Search:
-                            <br>
-                            - Select the prefab you want to search.
-                            <br>
-                            <br>
-                            2. Material to Replace With:
-                            <br>
-                            - Select the material from the project resources that you want to assign to the prefab.
-                            <br>
-                            <br>
-                            3. Replace Mesh (optional):
-                            <br>
-                            - Check the 'Replace Mesh' option and select the mesh from the project resources that you want to assign to the prefab.
-                            <br>
-                            <br>
-                            4. Scenes to Search:
-                            <br>
-                            - Select the scenes you want to search.
-                            <br>
-                            <br>
-                            5. 'Replace Material and Mesh' Button:
-                            <br>
-                            - After selecting the prefab, material, mesh (optional), and scenes, click the 'Replace Material and Mesh' button to start the process of replacing the material and/or mesh.
-                            <br>
-                            - Replacing material and/or mesh in prefab instances:
-                            <br>
-                            - The tool searches the selected scenes and replaces the material and/or mesh in all instances of the prefab.
-                            <br>
-                            <br>
-                            Example:
-                            <br>
-                            Let's say you want to replace the material CatMaterial and the mesh CatMesh in all instances of the CatPrefab in the selected scenes:
-                            <br>
-                            1. Select CatPrefab in the 'Prefab to Search' field.
-                            <br>
-                            2. Select CatMaterial in the 'Material to Replace With' field.
-                            <br>
-                            3. Check 'Replace Mesh' and select CatMesh in the 'Mesh to Replace With' field.
-                            <br>
-                            4. Select the appropriate scenes in the 'Scenes to Search' section.
-                            <br>
-                            5. Click the 'Replace Material and Mesh' button.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <!--
-                Enter
-                -->
-
-                <li class="achievements-item-passive" data-filter-item data-category="chesspeare">
-                  <a>
-                    <figure class="achievements-img">
-                      <div class="achievements-item-icon-box">
-                        <ion-icon name="eye-outline"></ion-icon>
-                      </div>
-
-                      <img src="./assets/images/gridPos.gif" alt="grid" loading="lazy">
-
-                    </figure>
-                    <h3 class="achievements-title">Grid Position Set - script</h3>
-
-                    <p class="achievements-category">Chesspeare</p>
-                  </a>
-
-                  <!-- #Info button  -->
-
-                  <div class="collapse-container">
-                    <ion-button class="collapse-btn">
-                      Show info
-                    </ion-button>
-                    <div class="collapse-content">
-                      <div class="content-wrapper">
-                        <div class="content-text">
-                          <p>This is a script I created myself to easily set levels in our Chesspeare game.
-                            The most important element is **On Grid Position.** This is a tool that allows you to conveniently create figure settings for given levels.
-
-                            Initially the fields look like this:
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="collapse-image">
-                        <img src="./assets/images/GridPosTool.png" alt="grid" loading="lazy">
-                      </div>
-
-                      <div>
-                        <div class="content-text">
-                          <p>
-
-                          <h1 style="color: #EEF620"> The yellow box </h1>
-                          is our chosen field in the editor. Black is the initial position of our King. The white boxes are
-                          those already occupied by enemy figures and the blue boxes are special boxes. An empty field has
-                          an unchecked "*Set Chess*" box.
-
-                          We can then choose whether to place a figure or a special field on that field.
-
-                          <p>
-
-                          <h1 style="color: skyblue"> In the blue area </h1>
-                          we must have ticked:
-                          **Chess/Objects**: Chess (i.e. an indication that we are placing a figure).
-                          **Choose colour**: White (if we are placing an enemy figure) or Black (if our King).
-                          **Choose chesstype**: Here we indicate the specific type of figure we want.
-
-                          <h1 style="color: #19F181">The green area </h1>
-                          is **Moves Data**. For all figures except pawns (*Pawn*) we need to fill in this area. It contains
-                          a list of the subsequent moves that the figure will want to make. Subsequent moves are described
-                          by changes on the X/Z axis in relation to the figure's current position on the board.
-
-                          Note: this is the move the figure wants to make. It may differ from the actual one if the figure's
-                          movement is affected by elements such as special fields, knockdown or special rules of the world.
-
-                        </div>
-                        <div class="collapse-image">
-                          <img src="./assets/images/GridPosTool2.png" alt="grid" loading="lazy">
-                        </div>
-                        <p class="content-text">The setting up of special fields is still included in the script and I would be happy to talk about how this section works in person.</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                
-              </ul>
-            </section>
           </div>
 
 
@@ -986,72 +1022,6 @@
           <!--
           - GameJams 
         -->
-          
-
-          <!-- Example Project -->
-          <ul>
-            <li class="service-item" onclick="openPopup( 
-            'PRAWDZIWY TYTUL.', 
-            'fajny opis.', 
-            './path_to_main_image.jpg', 
-            [
-              { src: './assets/images/image1.jpg', alt: 'Image 1 Description', caption: 'First image caption' },
-              { src: './assets/images/image2.jpg', alt: 'Image 2 Description' },
-              { src: './assets/images/23.jpg', alt: 'Image 3 Description', caption: 'Third image caption' }
-            ]
-          )">
-              <div class="special-icon">
-                <ion-icon name="hammer-outline" size="large"></ion-icon>
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Is a project</h4>
-                <p class="service-item-text">
-                  Short description of the project.
-                </p>
-              </div>
-            </li>
-          </ul>
-
-          <!-- Overlay for background dimming -->
-          <div class="overlay"></div>
-
-          <!-- Popup HTML -->
-          <div class="popup">
-            <div class="popup-content">
-              <span class="popup-close">&times;</span>
-
-              <div class="popup-header">
-                <img class="popup-image" src="./default_image.jpg" alt="Project Image">
-                <div class="popup-text">
-                  <h3 class="popup-title">PRAWDZIWY TYTUL</h3>
-                  <p class="popup-description">fajny opis</p>
-                </div>
-              </div>
-
-              <div class="popup-gallery">
-                <!-- Dynamically added gallery images will go here -->
-              </div>
-
-              <!-- Info button and collapsible content -->
-              <div class="collapse-container">
-                <ion-button class="collapse-btn">Show info</ion-button>
-                <div class="collapse-content">
-                  <div class="content-wrapper-no-flex">
-                    <div class="content-text">
-                      <div>
-                        Additional info about the project.
-                      </div>
-                    </div>
-                    <div class="content-image">
-                      <img src="./assets/images/extra_image.jpg" alt="Extra Image">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
 
 
           <!-- Figa de Gattino -->
