@@ -77,7 +77,7 @@
   --fs-2: 18px;
   --name-fs: 40px;
   --popup-fs: 2px;
-  --fs-5: 15px;
+  --achivments-title-fs-5: 18px;
   --serviceText-fs: 14px;
   --fs-7: 13px;
   --button-fs: 40px;
@@ -715,6 +715,10 @@ a:active {
   color: var(--white-2);
 }
 
+.popup-info-item strong {
+  color: #f2d76b;
+}
+
 .popup-info-item p {
   margin: 0;
   font-size: var(--serviceText-fs);
@@ -1183,8 +1187,8 @@ body.no-scroll {
 .achievements-category { margin-left: 10px; }
 
 .achievements-title {
-  color: var(--white-2);
-  font-size: var(--fs-5);
+  color: var(--orange-yellow-crayola);
+  font-size: var(--achivments-title-fs-5);
   font-weight: var(--fw-400);
   text-transform: capitalize;
   line-height: 1.3;
