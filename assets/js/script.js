@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
         fullscreenImage.remove();
         fullscreenOverlay.remove();
         closeBtn.remove();
-      }, 300); // Wait for the animation to finish before removing elements
+      }, 200); // Wait for the animation to finish before removing elements
     }
   }
 
