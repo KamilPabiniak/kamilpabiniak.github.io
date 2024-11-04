@@ -135,7 +135,7 @@
           </li>
           
             <li class="navbar-item">
-              <button class="" data-nav-link title="CV Download"><a href="./assets/files/CV%20Kamil%20Pabiniak%202024.pdf" style="color:lightgrey;" download><b>CV</b></a></button>
+              <button class="navbar-link" data-nav-link title="CV Download"><a href="./assets/files/CV%20Kamil%20Pabiniak%202024.pdf" style="color:lightgrey;" download><b>CV</b></a></button>
           </li>
 
         </ul>
@@ -254,7 +254,7 @@
                 <li class="project-top-data">
                   <h4 class="h4 service-item-title">Chesspeares - October 2023</h4>
                   <a href="https://zoriagames.itch.io/chesspeare" class="link-items">
-                    <ion-icon name="logo-windows"></ion-icon>
+                    <ion-icon name="game-controller"></ion-icon>
                   </a>
                 </li>
               </ul>
@@ -354,16 +354,93 @@
                       <li class="select-item">
                         <button data-select-item>Position and Movement</button>
                       </li>
+
+                      <li class="select-item">
+                        <button data-select-item>dialogue</button>
+                      </li>
                     </ul>
                   </div>
   
   
                   <ul class="achievements-list">
-  
-                    <li class="achievements-item-passive" data-filter-item data-category="chesspeare">
+
+                    <li class="achievements-item-passive" data-filter-item data-category="position and movement">
                       <a>
-                        <h3 class="achievements-title">Script - Global Data for Characters in game</h3>
-                        <p class="achievements-category">Chesspeare</p>
+                        <h3 class="achievements-title">Grid Position Set</h3>
+                        <p class="achievements-category" style="text-transform:uppercase">position and movement</p>
+                        <figure class="achievements-img">
+                          <img src="./assets/images/gridPos.gif" alt="grid" loading="lazy">
+                        </figure>
+                      </a>
+
+                      <!-- #Info button  -->
+
+                      <div class="collapse-container">
+                        <ion-button class="collapse-btn">
+                          Show info
+                        </ion-button>
+                        <div class="collapse-content">
+                          <div class="content-wrapper">
+                            <div class="content-text">
+                              <p>This is a script I created myself to easily set levels in our Chesspeare game.
+                                The most important element is **On Grid Position.** This is a tool that allows you to conveniently create figure settings for given levels.
+
+                                Initially the fields look like this:
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="collapse-image">
+                            <img src="./assets/images/GridPosTool.png" alt="grid" loading="lazy">
+                          </div>
+
+                          <div>
+                            <div class="content-text">
+                              <p>
+
+                              <h1 style="color: #EEF620"> The yellow box </h1>
+                              is our chosen field in the editor. Black is the initial position of our King. The white boxes are
+                              those already occupied by enemy figures and the blue boxes are special boxes. An empty field has
+                              an unchecked "*Set Chess*" box.
+
+                              We can then choose whether to place a figure or a special field on that field.
+
+                              <p>
+
+                              <h1 style="color: skyblue"> In the blue area </h1>
+                              we must have ticked:
+                              **Chess/Objects**: Chess (i.e. an indication that we are placing a figure).
+                              **Choose colour**: White (if we are placing an enemy figure) or Black (if our King).
+                              **Choose chesstype**: Here we indicate the specific type of figure we want.
+
+                              <h1 style="color: #19F181">The green area </h1>
+                              is **Moves Data**. For all figures except pawns (*Pawn*) we need to fill in this area. It contains
+                              a list of the subsequent moves that the figure will want to make. Subsequent moves are described
+                              by changes on the X/Z axis in relation to the figure's current position on the board.
+
+                              Note: this is the move the figure wants to make. It may differ from the actual one if the figure's
+                              movement is affected by elements such as special fields, knockdown or special rules of the world.
+
+                            </div>
+                            <div class="collapse-image">
+                              <img src="./assets/images/GridPosTool2.png" alt="grid" loading="lazy">
+                            </div>
+                            <p class="content-text">The setting up of special fields is still included in the script and I would be happy to talk about how this section works in person.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+
+                    <!--
+                  Enter
+                  -->
+                    
+                    
+                    <li class="achievements-item-passive" data-filter-item data-category="dialogue">
+                      <a>
+                        <h3 class="achievements-title">Global Data for Characters in game</h3>
+                        <p class="achievements-category" style="text-transform:uppercase">dialogue</p>
                         <figure class="achievements-img">
                           <img src="./assets/images/Dialogue.gif" alt="grid" loading="lazy">
                         </figure>
@@ -417,16 +494,13 @@
                     Enter
                     -->
   
-                    <li class="achievements-item-passive" data-filter-item data-category="chesspeare">
+                    <li class="achievements-item-passive" data-filter-item data-category="position and movement">
                       <a>
+                        <h3 class="achievements-title">Moves Factories for Bots</h3>
+                        <p class="achievements-category" style="text-transform:uppercase">position and movement</p>
                         <figure class="achievements-img">
-  
-                          <img src="./assets/images/BotMoves.gif" alt="grid" loading="lazy">
-  
+                          <img src="./assets/images/chesspeare/BotMoves.gif" alt="grid" loading="lazy">
                         </figure>
-                        <h3 class="achievements-title">Moves Factories for Bots - script</h3>
-  
-                        <p class="achievements-category">Chesspeare</p>
                       </a>
                       <!-- #Info button  -->
   
@@ -627,82 +701,7 @@
                       </div>
                     </li>
   
-                    <!--
-                    Enter
-                    -->
-  
-                    <li class="achievements-item-passive" data-filter-item data-category="position and movement">
-                      <a>
-                        <figure class="achievements-img">
-                          <div class="achievements-item-icon-box">
-                            <ion-icon name="eye-outline"></ion-icon>
-                          </div>
-  
-                          <img src="./assets/images/gridPos.gif" alt="grid" loading="lazy">
-  
-                        </figure>
-                        <h3 class="achievements-title">Grid Position Set - script</h3>
-  
-                        <p class="achievements-category">Chesspeare</p>
-                      </a>
-  
-                      <!-- #Info button  -->
-  
-                      <div class="collapse-container">
-                        <ion-button class="collapse-btn">
-                          Show info
-                        </ion-button>
-                        <div class="collapse-content">
-                          <div class="content-wrapper">
-                            <div class="content-text">
-                              <p>This is a script I created myself to easily set levels in our Chesspeare game.
-                                The most important element is **On Grid Position.** This is a tool that allows you to conveniently create figure settings for given levels.
-  
-                                Initially the fields look like this:
-                              </p>
-                            </div>
-                          </div>
-  
-                          <div class="collapse-image">
-                            <img src="./assets/images/GridPosTool.png" alt="grid" loading="lazy">
-                          </div>
-  
-                          <div>
-                            <div class="content-text">
-                              <p>
-  
-                              <h1 style="color: #EEF620"> The yellow box </h1>
-                              is our chosen field in the editor. Black is the initial position of our King. The white boxes are
-                              those already occupied by enemy figures and the blue boxes are special boxes. An empty field has
-                              an unchecked "*Set Chess*" box.
-  
-                              We can then choose whether to place a figure or a special field on that field.
-  
-                              <p>
-  
-                              <h1 style="color: skyblue"> In the blue area </h1>
-                              we must have ticked:
-                              **Chess/Objects**: Chess (i.e. an indication that we are placing a figure).
-                              **Choose colour**: White (if we are placing an enemy figure) or Black (if our King).
-                              **Choose chesstype**: Here we indicate the specific type of figure we want.
-  
-                              <h1 style="color: #19F181">The green area </h1>
-                              is **Moves Data**. For all figures except pawns (*Pawn*) we need to fill in this area. It contains
-                              a list of the subsequent moves that the figure will want to make. Subsequent moves are described
-                              by changes on the X/Z axis in relation to the figure's current position on the board.
-  
-                              Note: this is the move the figure wants to make. It may differ from the actual one if the figure's
-                              movement is affected by elements such as special fields, knockdown or special rules of the world.
-  
-                            </div>
-                            <div class="collapse-image">
-                              <img src="./assets/images/GridPosTool2.png" alt="grid" loading="lazy">
-                            </div>
-                            <p class="content-text">The setting up of special fields is still included in the script and I would be happy to talk about how this section works in person.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
+                    
   
                   </ul>
                 </section>

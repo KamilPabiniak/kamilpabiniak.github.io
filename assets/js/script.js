@@ -246,7 +246,6 @@ document.addEventListener('DOMContentLoaded', function() {
     enlargePopupImage(this.src); // Enlarge the clicked image
   });
 
-
-
+  
 
 });
