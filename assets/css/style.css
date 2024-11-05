@@ -623,8 +623,6 @@ a:active {
 
 .popup-image {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: auto;
   height: 500px;
   object-fit: cover;
@@ -748,6 +746,9 @@ a:active {
 .gallery-item img {
   max-width: 100%;
   border-radius: 8px;
+  width: 300px; 
+  height: 137px; 
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 

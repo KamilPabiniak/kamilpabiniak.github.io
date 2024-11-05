@@ -28,7 +28,7 @@ selectItems.forEach(item => {
     const selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     toggleActiveClass(select);
-    filterPortfolio(selectedValue); 
+    filterPortfolio(selectedValue);
   });
 });
 
@@ -116,7 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// Popup function to show the project-specific title, description, image, and gallery
+
+// Funkcja otwierająca popup i ustawiająca pierwszy obrazek galerii jako domyślny
   window.openPopup = function(projectId) {
     const popup = document.querySelector(`#${projectId}`);
     const overlay = document.querySelector(".overlay");
@@ -125,67 +126,17 @@ document.addEventListener('DOMContentLoaded', function() {
       popup.classList.add("active");
       overlay.classList.add("active");
       document.body.classList.add("no-scroll");
-      
-      const closeBtn = popup.querySelector(".popup-close");
-      closeBtn.addEventListener("click", closePopup);
-      overlay.addEventListener("click", closePopup);
 
-      function closePopup() {
-        popup.classList.remove("active");
-        overlay.classList.remove("active");
-        document.body.classList.remove("no-scroll");
+      // Znajdź pierwszy obrazek z galerii i ustaw go jako domyślny w popupie
+      const popupImage = popup.querySelector(".popup-image");
+      const firstGalleryImage = popup.querySelector(".gallery-item img");
+
+      if (firstGalleryImage) {
+        popupImage.src = firstGalleryImage.src;
+        popupImage.alt = firstGalleryImage.alt;
       }
-    }
-  };
 
-
-  
-  
-  // Function to update popup-image with the selected gallery image
-  function updatePopupImage(src, alt) {
-    const popupImage = document.querySelector(".popup-image");
-    popupImage.classList.remove('visible');
-    popupImage.classList.add('hidden');
-
-    setTimeout(() => {
-      popupImage.src = src;
-      popupImage.alt = alt;
-      popupImage.classList.remove('hidden');
-      popupImage.classList.add('visible');
-    }, 300);
-  }
-
-
-// Function to initialize the gallery
-  function initGallery(popupId) {
-    const popup = document.querySelector(`#${popupId}`);
-    const galleryItems = popup.querySelectorAll(".gallery-item img");
-
-    // Set the first gallery image as the popup-image by default
-    if (galleryItems.length > 0) {
-      const firstImage = galleryItems[0];
-      updatePopupImage(firstImage.src, firstImage.alt);
-    }
-
-    // Add click event listeners to gallery images
-    galleryItems.forEach(item => {
-      item.addEventListener("click", function () {
-        updatePopupImage(this.src, this.alt); // Update popup-image when clicked
-      });
-    });
-  }
-
-// Function to open the popup and initialize the gallery
-  window.openPopup = function(projectId) {
-    const popup = document.querySelector(`#${projectId}`);
-    const overlay = document.querySelector(".overlay");
-
-    if (popup) {
-     
-      popup.classList.add("active");
-      overlay.classList.add("active");
-      document.body.classList.add("no-scroll");
-
+      // Inicjalizuj kliknięcia galerii dla aktualizacji obrazka w popupie
       initGallery(projectId);
 
       const closeBtn = popup.querySelector(".popup-close");
@@ -200,8 +151,38 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 
+// Funkcja aktualizująca obrazek popupu na podstawie wybranego obrazu z galerii (z animacją)
+  function updatePopupImage(popupImage, src, alt) {
+    // Ukryj obecny obrazek z animacją
+    popupImage.classList.remove('visible');
+    popupImage.classList.add('hidden');
 
-  // Function to enable image enlargement
+    // Czekaj na zakończenie animacji przed zmianą źródła obrazu
+    setTimeout(() => {
+      popupImage.src = src;
+      popupImage.alt = alt;
+
+      // Pokaż nowy obrazek z animacją
+      popupImage.classList.remove('hidden');
+      popupImage.classList.add('visible');
+    }, 300); // Dopasuj do czasu trwania animacji CSS dla płynnej zmiany
+  }
+
+// Funkcja inicjalizująca kliknięcia galerii dla danego popupu
+  function initGallery(popupId) {
+    const popup = document.querySelector(`#${popupId}`);
+    const galleryItems = popup.querySelectorAll(".gallery-item img");
+    const popupImage = popup.querySelector(".popup-image");
+
+    // Dodaj eventy kliknięcia do obrazków w galerii
+    galleryItems.forEach(item => {
+      item.addEventListener("click", function () {
+        updatePopupImage(popupImage, this.src, this.alt); // Aktualizuj główny obrazek w popupie po kliknięciu
+      });
+    });
+  }
+
+// Funkcja powiększania obrazka w trybie pełnoekranowym
   function enlargePopupImage(src) {
     const fullscreenOverlay = document.createElement("div");
     fullscreenOverlay.classList.add("fullscreen-overlay");
@@ -212,20 +193,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const closeBtn = document.createElement("span");
     closeBtn.classList.add("fullscreen-close");
-    closeBtn.innerHTML = "&times;"; // Close button (X)
+    closeBtn.innerHTML = "&times;"; // Przycisk zamknięcia
 
-    // Add elements to the body
+    // Dodaj elementy do body
     document.body.appendChild(fullscreenOverlay);
     document.body.appendChild(fullscreenImage);
     document.body.appendChild(closeBtn);
 
-    // Make the image and overlay visible with animations
+    // Wyświetl obrazek i overlay z animacją
     setTimeout(() => {
       fullscreenImage.classList.add("visible");
       fullscreenOverlay.classList.add("active");
     }, 10);
 
-    // Close on clicking the close button or outside the image
+    // Zamknięcie trybu pełnoekranowego po kliknięciu w overlay lub przycisk zamknięcia
     closeBtn.addEventListener("click", closeFullscreenImage);
     fullscreenOverlay.addEventListener("click", closeFullscreenImage);
 
@@ -236,16 +217,17 @@ document.addEventListener('DOMContentLoaded', function() {
         fullscreenImage.remove();
         fullscreenOverlay.remove();
         closeBtn.remove();
-      }, 200); // Wait for the animation to finish before removing elements
+      }, 200); // Czekaj na zakończenie animacji przed usunięciem elementów
     }
   }
 
-// Add click event listener to the popup-image
-  const popupImage = document.querySelector(".popup-image");
-  popupImage.addEventListener("click", function () {
-    enlargePopupImage(this.src); // Enlarge the clicked image
+// Dodaj eventy kliknięcia do wszystkich obrazków popupów, aby umożliwić powiększanie
+  document.querySelectorAll(".popup-image").forEach(popupImage => {
+    popupImage.addEventListener("click", function () {
+      enlargePopupImage(this.src); // Powiększ kliknięty obrazek
+    });
   });
 
-  
+
 
 });
