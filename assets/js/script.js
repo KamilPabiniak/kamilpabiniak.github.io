@@ -28,11 +28,14 @@ window.openPopup = function(projectId) {
 
     // Set the first gallery image as the default in the popup
     const popupImage = popup.querySelector(".popup-image");
+    const popupVideo = popup.querySelector(".popup-video");
     const firstGalleryImage = popup.querySelector(".gallery-item img");
 
-    if (firstGalleryImage) {
+    if (firstGalleryImage && !firstGalleryImage.dataset.src) {
       popupImage.src = firstGalleryImage.src;
       popupImage.alt = firstGalleryImage.alt;
+    } else if (firstGalleryImage && firstGalleryImage.dataset.src) {
+      popupVideo.src = firstGalleryImage.dataset.src;
     }
 
     initGallery(projectId);
@@ -56,7 +59,6 @@ function initFilterSelect(popup) {
   const portfolioItems = popup.querySelectorAll("[data-filter-item]");
 
   if (select) {
-    selectValue.innerText = "All";
     filterPortfolio("all", portfolioItems);
 
     select.addEventListener("click", function () {
@@ -140,10 +142,17 @@ function initGallery(popupId) {
   const popup = document.querySelector(`#${popupId}`);
   const galleryItems = popup.querySelectorAll(".gallery-item img");
   const popupImage = popup.querySelector(".popup-image");
+  const popupVideo = popup.querySelector(".popup-video");
 
   galleryItems.forEach(item => {
     item.addEventListener("click", function () {
-      updatePopupImage(popupImage, this.src, this.alt);
+      if (this.dataset.src) {
+        updatePopupMedia(popupVideo, popupImage, this.dataset.src);
+      } else {
+        updatePopupImage(popupImage, this.src, this.alt);
+        popupVideo.style.display = 'none';
+        popupImage.style.display = 'block';
+      }
     });
   });
 }
@@ -157,8 +166,15 @@ function updatePopupImage(popupImage, src, alt) {
     popupImage.alt = alt;
     popupImage.classList.remove('hidden');
     popupImage.classList.add('visible');
-  }, 300);
+  }, 1);
 }
+
+function updatePopupMedia(popupVideo, popupImage, videoSrc) {
+  popupImage.style.display = 'none'; 
+  popupVideo.src = videoSrc;         
+  popupVideo.style.display = 'block';
+}
+
 
 function enlargePopupImage(src) {
   const fullscreenOverlay = document.createElement("div");

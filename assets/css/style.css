@@ -632,6 +632,17 @@ a:active {
   cursor: pointer;
 }
 
+.popup-video {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-left: 55px;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
 .popup-image.hidden {
   opacity: 0;
 }
