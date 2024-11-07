@@ -623,7 +623,7 @@ a:active {
 
 .popup-image {
   display: flex;
-  width: auto;
+  width: 900px;
   height: 500px;
   object-fit: cover;
   border-radius: 15px;
@@ -740,6 +740,15 @@ a:active {
   font-size: var(--popup-fs);
   color: var(--light-gray);
   margin-bottom: 20px;
+}
+
+.popup-description a {
+  display: inline;
+  white-space: nowrap;
+}
+
+.popup-description p {
+  display: inline;
 }
 
 .popup-gallery {
@@ -1289,11 +1298,11 @@ body.no-scroll {
 
 .content-text a {
   display: inline;
-  white-space: nowrap; /* Prevents breaking the line */
+  white-space: nowrap; 
 }
 
 .content-text p {
-  display: inline; /* Ensure text remains on the same line */
+  display: inline;
 }
 
 

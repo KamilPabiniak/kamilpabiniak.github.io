@@ -166,7 +166,7 @@ function updatePopupImage(popupImage, src, alt) {
     popupImage.alt = alt;
     popupImage.classList.remove('hidden');
     popupImage.classList.add('visible');
-  }, 1);
+  }, 150);
 }
 
 function updatePopupMedia(popupVideo, popupImage, videoSrc) {
