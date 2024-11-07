@@ -1076,23 +1076,8 @@ body.no-scroll {
   margin-bottom: 10px;
 }
 
-.achievements-item {
-  display: none;
-}
-
 .achievements-item-passive {
   display: none;
-}
-
-.achievements-item.active {
-  display: grid;
-  background-color: var(--onyx);
-  border: 1px solid hsl(240, 0%, 30%);
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  animation: scaleUp 0.25s ease forwards;
 }
 
 .achievements-item-passive.active {
@@ -1168,30 +1153,6 @@ body.no-scroll {
 .achievements-video:hover::before {
   pointer-events: none; /* Ensure hover effect but still clickable */
 }
-
-.achievements-item-icon-box {
-  --scale: 1.8;
-
-  background: var(--jet);
-  color: var(--orange-yellow-crayola);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(var(--scale));
-  font-size: 20px;
-  padding: 18px;
-  border-radius: 12px;
-  opacity: 0;
-  z-index: 1;
-  transition: var(--transition-1);
-}
-
-.achievements-item > a:hover .achievements-item-icon-box {
-  --scale: 1;
-  opacity: 1;
-}
-
-.achievements-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
 
 .achievements-img img {
   width: 100%;
