@@ -23,9 +23,6 @@ window.openPopup = function(projectId) {
     overlay.classList.add("active");
     document.body.classList.add("no-scroll");
 
-    // Initialize filter select within the popup
-    initFilterSelect(popup);
-
     // Set the first gallery image as the default in the popup
     const popupImage = popup.querySelector(".popup-image");
     const popupVideo = popup.querySelector(".popup-video");
@@ -44,10 +41,16 @@ window.openPopup = function(projectId) {
     closeBtn.addEventListener("click", closePopup);
     overlay.addEventListener("click", closePopup);
 
+    // Initialize filter select within the popup
+    initFilterSelect(popup);
+
     function closePopup() {
       popup.classList.remove("active");
       overlay.classList.remove("active");
       document.body.classList.remove("no-scroll");
+
+      // Reset and remove event listeners from select items on close
+      resetSelectEvents(popup);
     }
   }
 };
@@ -66,7 +69,7 @@ function initFilterSelect(popup) {
     });
 
     selectItems.forEach(item => {
-      item.addEventListener("click", function () {
+      item.addEventListener("click", function handleSelectClick() {
         const selectedValue = this.innerText.toLowerCase();
         selectValue.innerText = this.innerText;
         select.classList.remove("active");
@@ -76,6 +79,22 @@ function initFilterSelect(popup) {
   }
 }
 
+// Function to remove all event listeners and reset select state
+function resetSelectEvents(popup) {
+  const select = popup.querySelector("[data-select]");
+  const selectItems = popup.querySelectorAll("[data-select-item]");
+  const selectValue = popup.querySelector("[data-selecct-value]");
+
+  if (select) {
+    select.classList.remove("active"); // Reset select class
+    selectValue.innerText = "All"; // Reset to default value
+    select.replaceWith(select.cloneNode(true)); // Remove all event listeners on select
+
+    selectItems.forEach(item => {
+      item.replaceWith(item.cloneNode(true)); // Remove event listeners on select items
+    });
+  }
+}
 
 function filterPortfolio(selectedCategory, items) {
   items.forEach(item => {
@@ -86,6 +105,7 @@ function filterPortfolio(selectedCategory, items) {
     }
   });
 }
+
 
 // Page navigation functionality for switching between sections (About, Resume, Portfolio)
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
