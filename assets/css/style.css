@@ -436,11 +436,14 @@ main {
 
 .social-item .social-link {
   color: var(--orange-yellow-crayola);
-  font-size: 18px;
+  font-size: 30px;
 }
 
 
-.social-item .social-link:hover { color: var(--light-gray); }
+.social-item .social-link:hover { 
+  color: var(--light-gray);
+  transform: scale(1.2);
+}
 
 
 
